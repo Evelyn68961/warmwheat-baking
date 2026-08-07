@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="講師照片(佔位示意圖)">
+  <rect width="200" height="200" fill="#F1E4D6"/>
+  <circle cx="100" cy="200" r="86" fill="#6B4423"/>
+  <path d="M62 152h76c-6-16-20-24-38-24s-32 8-38 24Z" fill="#FBF7F1"/>
+  <circle cx="100" cy="98" r="38" fill="#E8C9A6"/>
+  <path d="M66 92c0-24 16-38 34-38s34 14 34 38c0-8-14-14-34-14S66 84 66 92Z" fill="#4E301A"/>
+  <path d="M62 66h76v-8c0-10-8-16-38-16S62 48 62 58Z" fill="#FBF7F1"/>
+  <rect x="58" y="60" width="84" height="12" rx="6" fill="#F3E3CD"/>
+  <g fill="#4E301A"><circle cx="88" cy="100" r="3.5"/><circle cx="112" cy="100" r="3.5"/></g>
+  <path d="M92 116c5 4 11 4 16 0" stroke="#4E301A" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

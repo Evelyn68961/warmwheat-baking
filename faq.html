@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常見問題｜暖麥烘焙教室</title>
+<meta name="description" content="報名、課程、付款與退費、教室與設備的常見問題整理。找不到答案可以直接來電或寫信給我們。">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+      <span class="logo__name">暖麥烘焙教室</span>
+    </a>
+    <nav class="nav" aria-label="主選單">
+      <a class="nav__link" href="index.html">首頁</a>
+      <a class="nav__link" href="courses.html">課程總覽</a>
+      <a class="nav__link" href="about.html">關於教室</a>
+      <a class="nav__link" href="faq.html" aria-current="page">常見問題</a>
+    </nav>
+    <button class="saved-btn" type="button" id="savedBtn" aria-expanded="false" aria-controls="savedDrawer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 4.2 12.9a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.8.8.8-.8a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7z"/></svg>
+      <span>收藏</span>
+      <span class="saved-btn__count" id="savedCount" data-empty>0</span>
+    </button>
+    <a class="btn btn--primary btn--sm" href="courses.html">立即報名</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <nav aria-label="麵包屑">
+      <ol class="crumb">
+        <li><a href="index.html">首頁</a></li>
+        <li aria-current="page">常見問題</li>
+      </ol>
+    </nav>
+    <h1 style="margin-top:var(--s-3)">常見問題</h1>
+    <p class="page-head__meta">找不到答案？直接來電 02-2700-0000，或寫信到 hello@warmwheat.example</p>
+  </div>
+</div>
+
+<main id="main">
+<div class="container" style="max-width:860px; padding-block:var(--s-10) var(--s-20)">
+
+  <nav class="faq-nav" aria-label="問題分類">
+    <a href="#booking">報名與名額</a>
+    <a href="#course">課程內容</a>
+    <a href="#payment">付款與退費</a>
+    <a href="#studio">教室與設備</a>
+    <a href="#allergy">飲食與過敏</a>
+  </nav>
+
+  <!-- ========================================================== Booking -->
+  <section class="block" id="booking">
+    <h2>報名與名額</h2>
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="b1" id="qb1">要多久前報名？</button>
+        <div class="faq__a" id="b1" role="region" aria-labelledby="qb1" hidden>
+          熱門梯次通常開放後兩週內就會滿，建議至少提前一個月。若梯次已額滿，可以在課程頁留下聯絡方式，有人取消時我們會依順序通知。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="b2" id="qb2">額滿的課還有機會嗎？</button>
+        <div class="faq__a" id="b2" role="region" aria-labelledby="qb2" hidden>
+          有。每個梯次平均會有 1–2 位臨時改期，我們會照候補順序通知，通常在開課前三到五天。候補不需要先付款。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="b3" id="qb3">可以幫朋友一起報名嗎？</button>
+        <div class="faq__a" id="b3" role="region" aria-labelledby="qb3" hidden>
+          可以。報名時在「同行人數」填寫人數，系統會一併保留相鄰的工作檯位。每個人仍需各自計費，因為每人都會做出一份完整成品。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="b4" id="qb4">報名前評估是什麼？一定要做嗎？</button>
+        <div class="faq__a" id="b4" role="region" aria-labelledby="qb4" hidden>
+          是一份五題的小問卷，問你的烘焙經驗、想學的方向、可上課時段與飲食限制，送出後會立刻告訴你這堂課適不適合你。
+          不是強制的，但很推薦——它最常幫到的情況，是攔下想直接報進階班的零經驗學員。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== Course -->
+  <section class="block" id="course">
+    <h2>課程內容</h2>
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="c1" id="qc1">完全沒有經驗可以上嗎？</button>
+        <div class="faq__a" id="c1" role="region" aria-labelledby="qc1" hidden>
+          標示「入門」的課程都是為零經驗設計的，所有步驟老師會先示範一次。標示「進階」的課會預設你揉過麵團、用過發酵箱，建議先上一堂入門。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="c2" id="qc2">課程中會提供食譜嗎？</button>
+        <div class="faq__a" id="c2" role="region" aria-labelledby="qc2" hidden>
+          會。每堂課都附一張配方卡，包含完整比例、家用烤箱的溫度時間換算，以及一份「失敗排查表」——列出常見的失敗狀況與原因。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="c3" id="qc3">家裡只有小烤箱，回家做得出來嗎？</button>
+        <div class="faq__a" id="c3" role="region" aria-labelledby="qc3" hidden>
+          做得出來，但需要調整。配方卡上有不同容量烤箱的建議設定，課堂上老師也會針對常見家用機型說明差異。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="c4" id="qc4">成品可以帶回家嗎？</button>
+        <div class="faq__a" id="c4" role="region" aria-labelledby="qc4" hidden>
+          全部都可以帶走，教室會提供包裝盒與保冷袋。每堂課的成品內容都寫在課程頁的「這堂課你會做出什麼」。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="c5" id="qc5">一個人報名會不會很奇怪？</button>
+        <div class="faq__a" id="c5" role="region" aria-labelledby="qc5" hidden>
+          不會，大約一半的學員都是自己來。每個人有獨立工作檯，不需要跟別人共用麵團或輪流操作。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== Payment -->
+  <section class="block" id="payment">
+    <h2>付款與退費</h2>
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="p1" id="qp1">有哪些付款方式？</button>
+        <div class="faq__a" id="p1" role="region" aria-labelledby="qp1" hidden>
+          報名送出後，我們會以 Email 寄出繳費連結，可用信用卡或 ATM 轉帳。完成繳費後才算報名成功並保留名額。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="p2" id="qp2">退費規則是什麼？</button>
+        <div class="faq__a" id="p2" role="region" aria-labelledby="qp2" hidden>
+          開課前 7 天（含）以上取消可全額退費；開課前 6 天至前 1 天退 70%；開課當日未到恕不退費，但可改期一次。
+          改期需在開課前 24 小時提出，同一筆報名限改一次。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="p3" id="qp3">可以開統一編號嗎？</button>
+        <div class="faq__a" id="p3" role="region" aria-labelledby="qp3" hidden>
+          可以。報名時在「發票開立」選擇「公司統編」並填寫抬頭與統編，發票會隨繳費完成後寄出。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="p4" id="qp4">課程因故取消怎麼辦？</button>
+        <div class="faq__a" id="p4" role="region" aria-labelledby="qp4" hidden>
+          若因講師臨時狀況或天災停課，我們會全額退費，或由你選擇改期至其他梯次，不受改期次數限制。颱風停課依台北市政府公告辦理。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== Studio -->
+  <section class="block" id="studio">
+    <h2>教室與設備</h2>
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="s1" id="qs1">需要自備什麼嗎？</button>
+        <div class="faq__a" id="s1" role="region" aria-labelledby="qs1" hidden>
+          空手來就可以。圍裙、工具、食材與包裝都由教室準備。只建議綁長髮的髮圈，以及穿好活動、不要寬袖的衣服。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="s2" id="qs2">可以拍照錄影嗎？</button>
+        <div class="faq__a" id="s2" role="region" aria-labelledby="qs2" hidden>
+          歡迎拍照，也可以錄自己的操作。若要拍到其他學員，請先徵得對方同意。老師的完整教學過程請不要全程錄影。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="s3" id="qs3">小孩可以一起來嗎？</button>
+        <div class="faq__a" id="s3" role="region" aria-labelledby="qs3" hidden>
+          課程含高溫烤箱操作，未滿 12 歲需由家長全程陪同。陪同者不另計費，但沒有獨立工作檯，也無法帶走額外成品。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="s4" id="qs4">有停車位嗎？</button>
+        <div class="faq__a" id="s4" role="region" aria-labelledby="qs4" hidden>
+          教室沒有專屬車位。建議停大安森林公園地下停車場，步行約 5 分鐘，或搭捷運至大安森林公園站 3 號出口。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== Allergy -->
+  <section class="block" id="allergy">
+    <h2>飲食與過敏</h2>
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a1" id="qa1">有食物過敏可以上課嗎？</button>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="qa1" hidden>
+          要看課程。每堂課的過敏原都寫在課程頁的「注意事項」，報名前評估也會依你填寫的過敏資訊提醒你。
+          含小麥、乳製品、蛋的配方無法替換材料——這是配方結構的問題，不是我們不願意調整。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a2" id="qa2">有純素（Vegan）的課嗎？</button>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="qa2" hidden>
+          有。「歐式酸種麵包」為純素配方，不含蛋與乳製品。其他課程目前都含奶或蛋。
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a3" id="qa3">教室會接觸堅果嗎？</button>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="qa3" hidden>
+          會。教室同時處理堅果類產品，即使該堂課不使用堅果，也無法完全避免交叉接觸。
+          嚴重堅果過敏者請自行評估，或先來電與我們討論。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band" style="margin-top:var(--s-14)">
+    <div>
+      <h2>還是不確定該上哪一堂？</h2>
+      <p>花一分鐘做報名前評估，回答五個問題，我們告訴你這堂課適不適合你，以及當天要注意什麼。</p>
+    </div>
+    <a class="btn btn--honey" href="enroll.html#assess">開始評估</a>
+  </div>
+
+</div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">
+          <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+          <span class="logo__name">暖麥烘焙教室</span>
+        </div>
+        <p class="footer__tag">Warm Wheat Baking Studio<br>台北大安・小班制實體烘焙課程</p>
+      </div>
+      <div>
+        <h3>課程分類</h3>
+        <ul>
+          <li><a href="courses.html?cat=bread">麵包課程</a></li>
+          <li><a href="courses.html?cat=cake">蛋糕課程</a></li>
+          <li><a href="courses.html?cat=cookie">餅乾課程</a></li>
+          <li><a href="courses.html?cat=tart">塔派課程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>教室資訊</h3>
+        <ul>
+          <li><a href="about.html">關於暖麥</a></li>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="enroll.html#assess">報名前評估</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>聯絡我們</h3>
+        <ul>
+          <li>台北市大安區新生南路二段 00 號 3 樓</li>
+          <li><a href="tel:+886227000000">02-2700-0000</a></li>
+          <li><a href="mailto:hello@warmwheat.example">hello@warmwheat.example</a></li>
+          <li>週二 – 週日 10:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 暖麥烘焙教室 Warm Wheat Baking Studio.</p>
+  </div>
+</footer>
+<div class="drawer" id="savedDrawer" role="dialog" aria-modal="true" aria-label="收藏的課程">
+  <div class="drawer__scrim"></div>
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <h2 style="font-size:var(--fs-h3); font-family:var(--font-sans)">收藏的課程</h2>
+      <button class="drawer__close" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="drawer__body">
+      <div id="savedList"></div>
+      <p class="drawer__empty" id="savedEmpty">還沒有收藏任何課程。<br>在課程卡片右上角點愛心即可加入。</p>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--block" href="courses.html">瀏覽全部課程</a>
+    </div>
+  </div>
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/saved.js"></script>
+</body>
+</html>

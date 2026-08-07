@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>關於教室｜暖麥烘焙教室</title>
+<meta name="description" content="暖麥烘焙教室位在台北大安，小班制 6 人手作烘焙課程。認識我們的教學理念、講師群、教室設備與交通方式。">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+      <span class="logo__name">暖麥烘焙教室</span>
+    </a>
+    <nav class="nav" aria-label="主選單">
+      <a class="nav__link" href="index.html">首頁</a>
+      <a class="nav__link" href="courses.html">課程總覽</a>
+      <a class="nav__link" href="about.html" aria-current="page">關於教室</a>
+      <a class="nav__link" href="faq.html">常見問題</a>
+    </nav>
+    <button class="saved-btn" type="button" id="savedBtn" aria-expanded="false" aria-controls="savedDrawer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 4.2 12.9a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.8.8.8-.8a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7z"/></svg>
+      <span>收藏</span>
+      <span class="saved-btn__count" id="savedCount" data-empty>0</span>
+    </button>
+    <a class="btn btn--primary btn--sm" href="courses.html">立即報名</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <nav aria-label="麵包屑">
+      <ol class="crumb">
+        <li><a href="index.html">首頁</a></li>
+        <li aria-current="page">關於教室</li>
+      </ol>
+    </nav>
+    <h1 style="margin-top:var(--s-3)">關於暖麥</h1>
+    <p class="page-head__meta">台北大安・小班制實體烘焙教室・2018 年開始上課</p>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============================================================= Story -->
+<section class="section section--tight">
+  <div class="container grid grid--2" style="gap:var(--s-14); align-items:center">
+    <div>
+      <span class="eyebrow">Our story</span>
+      <h2>從一台家用烤箱開始</h2>
+      <p style="margin-top:var(--s-4)" class="muted">
+        2018 年，我們在自家廚房開了第一堂課，四個人擠在一張餐桌旁邊做吐司。
+        那天麵團發過頭了，成品有點塌，但每個人都把自己那條抱回家。
+      </p>
+      <p style="margin-top:var(--s-4)" class="muted">
+        後來搬進大安區這間三十坪的教室，添了發酵箱與旋風爐，把班級人數固定在六人。
+        不是因為六是什麼特別的數字，而是我們算過：一位老師在三個半小時內，
+        最多只能認真看顧六雙手。
+      </p>
+      <p style="margin-top:var(--s-4)" class="muted">
+        我們不賣「拍起來很好看」的課。我們想教的是，
+        為什麼這個麵團今天比上次黏、發酵到底該看時間還是看狀態、
+        回家用小烤箱要怎麼調整。這些東西寫在食譜上沒有用，得站在檯子前面才學得會。
+      </p>
+    </div>
+    <div>
+      <img src="assets/images/course-main.svg" alt="教室的工作檯與剛出爐的吐司" width="1280" height="720" style="border-radius:var(--r-card)">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ Numbers -->
+<section class="section section--tight section--soft">
+  <div class="container">
+    <div class="grid grid--4">
+      <div class="feature">
+        <h3 style="font-family:var(--font-serif); font-size:1.75rem; color:var(--c-crust)">2018</h3>
+        <p>開始上課，至今第 8 年</p>
+      </div>
+      <div class="feature">
+        <h3 style="font-family:var(--font-serif); font-size:1.75rem; color:var(--c-crust)">6 人</h3>
+        <p>每班人數上限，不加開</p>
+      </div>
+      <div class="feature">
+        <h3 style="font-family:var(--font-serif); font-size:1.75rem; color:var(--c-crust)">3,400+</h3>
+        <p>累積上課學員人次</p>
+      </div>
+      <div class="feature">
+        <h3 style="font-family:var(--font-serif); font-size:1.75rem; color:var(--c-crust)">24 堂</h3>
+        <p>常態開課的課程數</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== Philosophy -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">How we teach</span>
+      <h2>我們怎麼上課</h2>
+      <p>三個半小時裡，我們希望你動手的時間比看的時間多。</p>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3v18M5 8l7-5 7 5"/></svg></span>
+        <h3>先講原理，再動手</h3>
+        <p>每個步驟開始前老師會示範一次，並說明為什麼要這樣做。照著做學得快，知道原因才帶得走。</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 5v14"/></svg></span>
+        <h3>一人一檯，不共用</h3>
+        <p>每位學員有自己的工作檯、器具與烤箱位置，從頭到尾做完整一份，不是分組輪流。</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16v13H4zM9 11h6M9 15h4"/></svg></span>
+        <h3>失敗的也會帶到課堂</h3>
+        <p>老師會準備發過頭、揉不夠的對照組，讓你知道「不對」長什麼樣子，回家才判斷得出來。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= Team -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Teachers</span>
+      <h2>講師群</h2>
+      <p>三位專職講師，各自負責不同的課程線。</p>
+    </div>
+
+    <div class="team">
+      <div class="member">
+        <img src="assets/images/instructor.svg" alt="講師 陳孟蓁" width="88" height="88">
+        <h3>陳孟蓁</h3>
+        <p class="member__role">麵包線・主廚講師</p>
+        <p>東京町パン店四年經驗，專攻高含水量吐司與酸種。累積授課超過 600 小時。</p>
+      </div>
+      <div class="member">
+        <img src="assets/images/instructor.svg" alt="講師 林韋辰" width="88" height="88">
+        <h3>林韋辰</h3>
+        <p class="member__role">蛋糕與塔派線</p>
+        <p>飯店點心房出身，擅長鮮奶油抹面與法式塔皮。教學速度慢，細節講得很碎。</p>
+      </div>
+      <div class="member">
+        <img src="assets/images/instructor.svg" alt="講師 黃品萱" width="88" height="88">
+        <h3>黃品萱</h3>
+        <p class="member__role">餅乾與免烤甜點線</p>
+        <p>負責入門課與親子場，最擅長把複雜步驟拆成任何人都跟得上的節奏。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== Equipment -->
+<section class="section section--tight section--soft">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Studio</span>
+      <h2>教室與設備</h2>
+    </div>
+    <div class="kit" style="max-width:820px">
+      <div>
+        <h3>主要設備</h3>
+        <ul>
+          <li>桌上型攪拌機 ×6（每人一台）</li>
+          <li>雙門發酵箱，可控溫控濕</li>
+          <li>旋風式專業烤箱 ×2</li>
+          <li>大理石工作檯，適合塔皮與千層</li>
+          <li>急速冷凍櫃、冷藏工作檯</li>
+        </ul>
+      </div>
+      <div>
+        <h3>教室提供</h3>
+        <ul>
+          <li>圍裙、頭巾、手套（免費借用）</li>
+          <li>所有課程食材與包裝盒</li>
+          <li>置物櫃與飲水機</li>
+          <li>無障礙電梯可直達 3 樓</li>
+          <li>課後成品保冷袋</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== Location -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Getting here</span>
+      <h2>交通方式</h2>
+    </div>
+    <div class="grid grid--2" style="gap:var(--s-10)">
+      <dl class="spec" style="margin:0; padding:0; border:0">
+        <div><dt>地址</dt><dd>台北市大安區新生南路二段 00 號 3 樓</dd></div>
+        <div><dt>捷運</dt><dd>大安森林公園站 3 號出口，步行 5 分鐘</dd></div>
+        <div><dt>公車</dt><dd>信義新生路口站，步行 2 分鐘</dd></div>
+        <div><dt>停車</dt><dd>教室無專屬車位，建議停大安森林公園地下停車場</dd></div>
+        <div><dt>營業時間</dt><dd>週二 – 週日 10:00–20:00（週一公休）</dd></div>
+        <div><dt>電話</dt><dd><a href="tel:+886227000000">02-2700-0000</a></dd></div>
+      </dl>
+      <div class="notice">
+        <ul>
+          <li>教室採預約制，沒有課程的時段不對外開放參觀。</li>
+          <li>大樓一樓有門禁，抵達後請按 3 樓門鈴，我們會下去接。</li>
+          <li>上課前 10 分鐘開放報到，太早到可以在一樓大廳稍候。</li>
+          <li>教室內全面禁菸，也請不要攜帶寵物（食安規範）。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== CTA -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>想找一堂適合自己的課？</h2>
+        <p>24 堂課程開放報名中。用條件篩選，或先做一分鐘的報名前評估，我們告訴你哪一堂適合你。</p>
+      </div>
+      <a class="btn btn--honey" href="courses.html">瀏覽課程</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">
+          <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+          <span class="logo__name">暖麥烘焙教室</span>
+        </div>
+        <p class="footer__tag">Warm Wheat Baking Studio<br>台北大安・小班制實體烘焙課程</p>
+      </div>
+      <div>
+        <h3>課程分類</h3>
+        <ul>
+          <li><a href="courses.html?cat=bread">麵包課程</a></li>
+          <li><a href="courses.html?cat=cake">蛋糕課程</a></li>
+          <li><a href="courses.html?cat=cookie">餅乾課程</a></li>
+          <li><a href="courses.html?cat=tart">塔派課程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>教室資訊</h3>
+        <ul>
+          <li><a href="about.html">關於暖麥</a></li>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="enroll.html#assess">報名前評估</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>聯絡我們</h3>
+        <ul>
+          <li>台北市大安區新生南路二段 00 號 3 樓</li>
+          <li><a href="tel:+886227000000">02-2700-0000</a></li>
+          <li><a href="mailto:hello@warmwheat.example">hello@warmwheat.example</a></li>
+          <li>週二 – 週日 10:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 暖麥烘焙教室 Warm Wheat Baking Studio.</p>
+  </div>
+</footer>
+<div class="drawer" id="savedDrawer" role="dialog" aria-modal="true" aria-label="收藏的課程">
+  <div class="drawer__scrim"></div>
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <h2 style="font-size:var(--fs-h3); font-family:var(--font-sans)">收藏的課程</h2>
+      <button class="drawer__close" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="drawer__body">
+      <div id="savedList"></div>
+      <p class="drawer__empty" id="savedEmpty">還沒有收藏任何課程。<br>在課程卡片右上角點愛心即可加入。</p>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--block" href="courses.html">瀏覽全部課程</a>
+    </div>
+  </div>
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/saved.js"></script>
+</body>
+</html>

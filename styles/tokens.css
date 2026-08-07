@@ -1,0 +1,84 @@
+/* ==========================================================================
+   tokens.css — design tokens extracted from Figma
+   暖麥烘焙教室 Warm Wheat Baking Studio
+   Change a value here and it propagates through every page.
+   ========================================================================== */
+
+:root {
+  /* ---- Color ---- */
+  --c-crust:       #6B4423;
+  --c-crust-dark:  #4E301A;
+  --c-crust-soft:  #F1E4D6;
+  --c-honey:       #C8892E;
+  --c-honey-soft:  #FBEFD9;
+  --c-oat:         #FBF7F1;
+  --c-surface:     #FFFFFF;
+  --c-ink:         #2E2823;
+  --c-ink-muted:   #7B7168;
+  --c-line:        #E8DDCF;
+  --c-ok:          #4B7A5A;
+  --c-warn:        #B4553F;
+
+  --c-focus:       #C8892E;
+
+  /* ---- Typography ---- */
+  --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+  --font-sans:  "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+                -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --fs-display: 2.75rem;    /* 44 */
+  --fs-h1:      2.25rem;    /* 36 */
+  --fs-h2:      1.625rem;   /* 26 */
+  --fs-h3:      1.125rem;   /* 18 */
+  --fs-body:    0.9375rem;  /* 15 */
+  --fs-small:   0.8125rem;  /* 13 */
+  --fs-eyebrow: 0.75rem;    /* 12 */
+
+  --lh-heading: 1.32;
+  --lh-body:    1.75;
+  --ls-eyebrow: 0.14em;
+
+  /* ---- Spacing scale ---- */
+  --s-1:  0.25rem;   /*  4 */
+  --s-2:  0.5rem;    /*  8 */
+  --s-3:  0.75rem;   /* 12 */
+  --s-4:  1rem;      /* 16 */
+  --s-5:  1.25rem;   /* 20 */
+  --s-6:  1.5rem;    /* 24 */
+  --s-8:  2rem;      /* 32 */
+  --s-10: 2.5rem;    /* 40 */
+  --s-14: 3.5rem;    /* 56 */
+  --s-20: 5rem;      /* 80 */
+
+  /* ---- Radius ---- */
+  --r-card:  12px;
+  --r-image: 8px;
+  --r-input: 8px;
+  --r-pill:  999px;
+
+  /* ---- Shadow ---- */
+  --sh-card:  0 1px 3px rgba(46, 40, 35, 0.06);
+  --sh-raise: 0 8px 24px rgba(46, 40, 35, 0.10);
+
+  /* ---- Layout ---- */
+  --container:     1200px;
+  --container-pad: var(--s-6);
+  --header-h:      68px;
+  --sidebar-w:     280px;
+  --booking-w:     340px;
+
+  /* ---- Motion ---- */
+  --t-fast: 150ms ease;
+  --t-base: 240ms ease;
+}
+
+/* Desktop is the design target (1440 frame) — this is a course-booking flow
+   people use at a desk. Below 1024 the layout degrades to a single column so
+   nothing breaks on a small laptop; it is a fallback, not a mobile design. */
+@media (max-width: 1024px) {
+  :root {
+    --fs-display: 2.25rem;
+    --fs-h1:      1.875rem;
+    --fs-h2:      1.5rem;
+  }
+}

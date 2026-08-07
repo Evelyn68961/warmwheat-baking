@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="塔派課程(佔位示意圖)">
+  <rect width="480" height="360" fill="#FBEFD9"/>
+  <circle cx="240" cy="170" r="118" fill="#F1E4D6"/>
+  <rect x="0" y="292" width="480" height="68" fill="#E8D3B6"/>
+  <ellipse cx="240" cy="212" rx="150" ry="52" fill="#C8892E"/>
+  <ellipse cx="240" cy="204" rx="132" ry="44" fill="#F3E3CD"/>
+  <ellipse cx="240" cy="200" rx="118" ry="38" fill="#D9B98C"/>
+  <g>
+    <circle cx="186" cy="192" r="17" fill="#B4553F"/>
+    <circle cx="240" cy="182" r="19" fill="#8C3B4A"/>
+    <circle cx="294" cy="192" r="17" fill="#B4553F"/>
+    <circle cx="212" cy="212" r="14" fill="#8C3B4A"/>
+    <circle cx="268" cy="212" r="14" fill="#B4553F"/>
+  </g>
+  <g stroke="#A06E22" stroke-width="4" fill="none">
+    <path d="M100 212c12 10 28 16 44 18"/><path d="M380 212c-12 10-28 16-44 18"/>
+  </g>
+  <ellipse cx="240" cy="264" rx="152" ry="10" fill="#D8BE9C"/>
+</svg>

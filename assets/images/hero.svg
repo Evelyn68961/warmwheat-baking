@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="烘焙教室工作檯(佔位示意圖)">
+  <rect width="900" height="600" fill="#FBF7F1"/>
+  <circle cx="470" cy="250" r="230" fill="#FBEFD9"/>
+  <rect x="0" y="452" width="900" height="148" fill="#F1E4D6"/>
+  <rect x="0" y="446" width="900" height="10" fill="#E0CDB6"/>
+
+  <!-- mixing bowl -->
+  <path d="M132 348h216c0 62-48 100-108 100S132 410 132 348Z" fill="#6B4423"/>
+  <ellipse cx="240" cy="348" rx="108" ry="26" fill="#8A5A31"/>
+  <ellipse cx="240" cy="346" rx="88" ry="19" fill="#F3E3CD"/>
+  <path d="M196 340c10-16 26-16 36-2s28 12 36-4" stroke="#C8892E" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+  <!-- whisk -->
+  <g stroke="#8A7C6C" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M392 448V300"/>
+    <path d="M392 302c-24 22-30 62-14 90"/>
+    <path d="M392 302c24 22 30 62 14 90"/>
+    <path d="M392 302c-8 30-8 62 0 90"/>
+  </g>
+  <rect x="380" y="196" width="24" height="106" rx="12" fill="#6B4423"/>
+
+  <!-- bread loaf -->
+  <path d="M520 448c0-72 38-118 96-118s96 46 96 118Z" fill="#C8892E"/>
+  <path d="M520 448c0-72 38-118 96-118s96 46 96 118Z" fill="none" stroke="#A06E22" stroke-width="5"/>
+  <g stroke="#8A5A20" stroke-width="6" stroke-linecap="round">
+    <path d="M566 386l24-30"/><path d="M604 380l24-30"/><path d="M642 386l24-30"/>
+  </g>
+
+  <!-- rolling pin -->
+  <g>
+    <rect x="740" y="404" width="132" height="34" rx="17" fill="#E8D3B6"/>
+    <rect x="712" y="415" width="34" height="12" rx="6" fill="#8A5A31"/>
+    <rect x="866" y="415" width="34" height="12" rx="6" fill="#8A5A31"/>
+  </g>
+
+  <!-- cupcake -->
+  <path d="M760 300h84l-14 96a12 12 0 0 1-12 10h-32a12 12 0 0 1-12-10Z" fill="#F1E4D6"/>
+  <path d="M760 300c0-30 20-46 42-46s42 16 42 46Z" fill="#C8892E"/>
+  <circle cx="802" cy="248" r="12" fill="#B4553F"/>
+
+  <!-- flour dust -->
+  <g fill="#E0CDB6">
+    <circle cx="300" cy="470" r="7"/><circle cx="330" cy="482" r="4"/><circle cx="278" cy="486" r="5"/>
+    <circle cx="470" cy="476" r="6"/><circle cx="500" cy="488" r="4"/>
+  </g>
+</svg>

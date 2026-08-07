@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>報名前評估與報名｜日式生吐司・暖麥烘焙教室</title>
+<meta name="description" content="先花一分鐘做適合度評估，確認這堂課適合你之後，再選擇梯次並填寫報名資料。">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+      <span class="logo__name">暖麥烘焙教室</span>
+    </a>
+    <nav class="nav" aria-label="主選單">
+      <a class="nav__link" href="index.html">首頁</a>
+      <a class="nav__link" href="courses.html">課程總覽</a>
+      <a class="nav__link" href="about.html">關於教室</a>
+      <a class="nav__link" href="faq.html">常見問題</a>
+    </nav>
+    <button class="saved-btn" type="button" id="savedBtn" aria-expanded="false" aria-controls="savedDrawer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 4.2 12.9a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.8.8.8-.8a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7z"/></svg>
+      <span>收藏</span>
+      <span class="saved-btn__count" id="savedCount" data-empty>0</span>
+    </button>
+    <a class="btn btn--primary btn--sm" href="courses.html">立即報名</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <nav aria-label="麵包屑">
+      <ol class="crumb">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="courses.html">課程總覽</a></li>
+        <li><a href="course.html">日式生吐司</a></li>
+        <li aria-current="page">報名</li>
+      </ol>
+    </nav>
+    <h1 style="margin-top:var(--s-3)">報名：日式生吐司・從麵團到出爐</h1>
+    <p class="page-head__meta">NT$1,880・3.5 小時・台北大安教室・每班上限 6 人</p>
+  </div>
+</div>
+
+<main id="main">
+<div class="container" style="max-width:880px; padding-block:var(--s-10) var(--s-20)">
+
+  <!-- ========================================================= Stepper -->
+  <ol class="stepper" id="stepper">
+    <li class="stepper__item" data-state="current"><b>STEP 1</b>適合度評估</li>
+    <li class="stepper__item"><b>STEP 2</b>選擇梯次</li>
+    <li class="stepper__item"><b>STEP 3</b>填寫資料</li>
+    <li class="stepper__item"><b>STEP 4</b>確認送出</li>
+  </ol>
+
+  <!-- ============================================ STEP 1 — assessment -->
+  <!-- 報名前評估：先確認課程適合，再進入報名流程 -->
+  <section class="step-panel" data-step="1" data-active id="assess" aria-labelledby="s1title">
+    <div class="panel">
+      <h2 id="s1title">先確認這堂課適合你</h2>
+      <p class="muted" style="margin-top:var(--s-3)">
+        5 個問題，大約一分鐘。我們不會用這些資料做任何行銷用途，
+        只用來判斷這堂課是否適合你，以及當天需要為你準備什麼。
+      </p>
+
+      <form id="assessForm" style="margin-top:var(--s-8)" novalidate>
+
+        <div class="q" role="group" aria-labelledby="qlabel1">
+          <p class="q__title" id="qlabel1"><i>1</i>你目前的烘焙經驗？</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="exp" value="none"><span>完全沒有做過</span></label>
+            <label class="opt"><input type="radio" name="exp" value="some"><span>在家做過幾次</span></label>
+            <label class="opt"><input type="radio" name="exp" value="lots"><span>經常做，想精進</span></label>
+            <label class="opt"><input type="radio" name="exp" value="pro"><span>相關從業人員</span></label>
+          </div>
+        </div>
+
+        <div class="q" role="group" aria-labelledby="qlabel2">
+          <p class="q__title" id="qlabel2"><i>2</i>你比較想學哪個方向？</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="goal" value="bread"><span>麵包類</span></label>
+            <label class="opt"><input type="radio" name="goal" value="sweet"><span>甜點類</span></label>
+            <label class="opt"><input type="radio" name="goal" value="gift"><span>做給家人朋友</span></label>
+            <label class="opt"><input type="radio" name="goal" value="career"><span>為了工作或證照</span></label>
+          </div>
+        </div>
+
+        <div class="q" role="group" aria-labelledby="qlabel3">
+          <p class="q__title" id="qlabel3"><i>3</i>你可以上課的時段？（可複選）</p>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="time" value="wd-day"><span>平日白天</span></label>
+            <label class="opt"><input type="checkbox" name="time" value="wd-night"><span>平日晚間</span></label>
+            <label class="opt"><input type="checkbox" name="time" value="weekend"><span>週末</span></label>
+          </div>
+        </div>
+
+        <div class="q" role="group" aria-labelledby="qlabel4">
+          <p class="q__title" id="qlabel4"><i>4</i>是否有食物過敏或飲食限制？（可複選）</p>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="allergy" value="none"><span>沒有</span></label>
+            <label class="opt"><input type="checkbox" name="allergy" value="dairy"><span>乳製品</span></label>
+            <label class="opt"><input type="checkbox" name="allergy" value="egg"><span>蛋</span></label>
+            <label class="opt"><input type="checkbox" name="allergy" value="nut"><span>堅果</span></label>
+            <label class="opt"><input type="checkbox" name="allergy" value="gluten"><span>麩質</span></label>
+            <label class="opt"><input type="checkbox" name="allergy" value="vegan"><span>純素</span></label>
+          </div>
+        </div>
+
+        <div class="q" role="group" aria-labelledby="qlabel5">
+          <p class="q__title" id="qlabel5"><i>5</i>這次會有幾個人一起上課？</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="party" value="1"><span>我自己</span></label>
+            <label class="opt"><input type="radio" name="party" value="2"><span>兩個人</span></label>
+            <label class="opt"><input type="radio" name="party" value="3"><span>三人以上</span></label>
+          </div>
+        </div>
+
+        <p class="field__error" id="assessError"></p>
+
+        <!-- 評估結果 -->
+        <div class="verdict" id="verdict" hidden role="status">
+          <h3 id="verdictTitle"></h3>
+          <p id="verdictText"></p>
+          <ul id="verdictList"></ul>
+        </div>
+
+        <div class="panel__actions">
+          <a class="btn btn--ghost" href="course.html">← 回課程頁</a>
+          <span style="display:flex; gap:var(--s-3)">
+            <button class="btn btn--ghost" type="button" id="assessSubmit">看評估結果</button>
+            <button class="btn btn--primary" type="button" id="toStep2" disabled>下一步：選擇梯次</button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================== STEP 2 — session -->
+  <section class="step-panel" data-step="2" aria-labelledby="s2title">
+    <div class="panel">
+      <h2 id="s2title">選擇梯次</h2>
+      <p class="muted" style="margin-top:var(--s-3)">已額滿的梯次無法選擇。若時段都不合適，可以先<a href="courses.html" class="link-arrow">看其他課程</a>。</p>
+
+      <div class="session" style="margin-top:var(--s-8)" id="sessionPick">
+        <label class="session__item">
+          <input type="radio" name="pick" value="9/06（六）10:00">
+          <span class="session__box">
+            <span class="session__date">9/06（六）10:00–13:30<span>講師 陳孟蓁・週末</span></span>
+            <span class="seat seat--low">剩 2 位</span>
+          </span>
+        </label>
+        <label class="session__item">
+          <input type="radio" name="pick" value="9/20（六）14:00">
+          <span class="session__box">
+            <span class="session__date">9/20（六）14:00–17:30<span>講師 陳孟蓁・週末</span></span>
+            <span class="seat seat--ok">剩 5 位</span>
+          </span>
+        </label>
+        <label class="session__item">
+          <input type="radio" name="pick" value="10/02（四）18:30">
+          <span class="session__box">
+            <span class="session__date">10/02（四）18:30–22:00<span>講師 陳孟蓁・平日晚間</span></span>
+            <span class="seat seat--ok">剩 4 位</span>
+          </span>
+        </label>
+        <label class="session__item">
+          <input type="radio" name="pick" value="10/04" disabled>
+          <span class="session__box">
+            <span class="session__date">10/04（六）10:00–13:30<span>講師 陳孟蓁・週末</span></span>
+            <span class="seat seat--full">已額滿</span>
+          </span>
+        </label>
+      </div>
+
+      <p class="field__error" id="sessionError"></p>
+
+      <div class="panel__actions">
+        <button class="btn btn--ghost" type="button" data-back>← 上一步</button>
+        <button class="btn btn--primary" type="button" id="toStep3">下一步：填寫資料</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ STEP 3 — details -->
+  <section class="step-panel" data-step="3" aria-labelledby="s3title">
+    <div class="panel">
+      <h2 id="s3title">填寫報名資料</h2>
+      <p class="muted" style="margin-top:var(--s-3)">課前 3 天會以簡訊與 Email 各發送一次提醒。</p>
+
+      <form class="form" id="detailForm" style="margin-top:var(--s-8)" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">姓名 <span class="req">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+            <span class="field__error" id="name-error"></span>
+          </div>
+          <div class="field">
+            <label for="phone">手機號碼 <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="09xxxxxxxx" autocomplete="tel" required aria-describedby="phone-error">
+            <span class="field__error" id="phone-error"></span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+            <span class="field__error" id="email-error"></span>
+          </div>
+          <div class="field">
+            <label for="invoice">發票開立</label>
+            <select id="invoice" name="invoice">
+              <option value="donate">捐贈發票</option>
+              <option value="member">會員載具</option>
+              <option value="company">公司統編</option>
+            </select>
+            <span class="field__error"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="note">備註（選填）</label>
+          <textarea id="note" name="note" placeholder="例如：需要素食替代、當天可能晚 10 分鐘到、想坐在朋友旁邊。"></textarea>
+        </div>
+
+        <div class="panel__actions">
+          <button class="btn btn--ghost" type="button" data-back>← 上一步</button>
+          <button class="btn btn--primary" type="submit">下一步：確認資料</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================================================ STEP 4 — confirm -->
+  <section class="step-panel" data-step="4" aria-labelledby="s4title">
+    <div class="panel">
+      <h2 id="s4title">確認報名資料</h2>
+      <p class="muted" style="margin-top:var(--s-3)">確認以下資訊無誤後送出。送出後我們會以 Email 寄送繳費連結。</p>
+
+      <table class="summary" style="margin-top:var(--s-8)">
+        <tbody>
+          <tr><th scope="row">課程</th><td>日式生吐司・從麵團到出爐</td></tr>
+          <tr><th scope="row">梯次</th><td id="sumSession">—</td></tr>
+          <tr><th scope="row">姓名</th><td id="sumName">—</td></tr>
+          <tr><th scope="row">手機</th><td id="sumPhone">—</td></tr>
+          <tr><th scope="row">Email</th><td id="sumEmail">—</td></tr>
+          <tr><th scope="row">同行人數</th><td id="sumParty">—</td></tr>
+          <tr><th scope="row">飲食限制</th><td id="sumAllergy">—</td></tr>
+          <tr><th scope="row">備註</th><td id="sumNote">—</td></tr>
+          <tr><th scope="row">金額</th><td id="sumPrice">NT$1,880</td></tr>
+        </tbody>
+      </table>
+
+      <div class="notice" style="margin-top:var(--s-6)">
+        <ul>
+          <li>本頁為前端流程示範，<strong>尚未串接付款與後端系統</strong>,送出不會產生實際訂單。</li>
+          <li>開課前 7 天可全額退費；7 天內至前 1 天退 70%。</li>
+        </ul>
+      </div>
+
+      <p class="done-note" id="doneNote" hidden>報名資料已送出，請至信箱收取繳費連結。</p>
+
+      <div class="panel__actions">
+        <button class="btn btn--ghost" type="button" data-back>← 上一步</button>
+        <button class="btn btn--primary" type="button" id="submitAll">送出報名</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">
+          <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+          <span class="logo__name">暖麥烘焙教室</span>
+        </div>
+        <p class="footer__tag">Warm Wheat Baking Studio<br>台北大安・小班制實體烘焙課程</p>
+      </div>
+      <div>
+        <h3>課程分類</h3>
+        <ul>
+          <li><a href="courses.html?cat=bread">麵包課程</a></li>
+          <li><a href="courses.html?cat=cake">蛋糕課程</a></li>
+          <li><a href="courses.html?cat=cookie">餅乾課程</a></li>
+          <li><a href="courses.html?cat=tart">塔派課程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>教室資訊</h3>
+        <ul>
+          <li><a href="about.html">關於暖麥</a></li>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="enroll.html#assess">報名前評估</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>聯絡我們</h3>
+        <ul>
+          <li>台北市大安區新生南路二段 00 號 3 樓</li>
+          <li><a href="tel:+886227000000">02-2700-0000</a></li>
+          <li><a href="mailto:hello@warmwheat.example">hello@warmwheat.example</a></li>
+          <li>週二 – 週日 10:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 暖麥烘焙教室 Warm Wheat Baking Studio.</p>
+  </div>
+</footer>
+
+<div class="drawer" id="savedDrawer" role="dialog" aria-modal="true" aria-label="收藏的課程">
+  <div class="drawer__scrim"></div>
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <h2 style="font-size:var(--fs-h3); font-family:var(--font-sans)">收藏的課程</h2>
+      <button class="drawer__close" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="drawer__body">
+      <div id="savedList"></div>
+      <p class="drawer__empty" id="savedEmpty">還沒有收藏任何課程。<br>在課程卡片右上角點愛心即可加入。</p>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--block" href="courses.html">瀏覽全部課程</a>
+    </div>
+  </div>
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/saved.js"></script>
+<script src="scripts/enroll.js"></script>
+</body>
+</html>
+

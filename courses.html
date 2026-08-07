@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>課程總覽｜暖麥烘焙教室</title>
+<meta name="description" content="依課程類型、難度、上課時段與價格篩選，快速找到適合你的實體烘焙課程。">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+      <span class="logo__name">暖麥烘焙教室</span>
+    </a>
+    <nav class="nav" aria-label="主選單">
+      <a class="nav__link" href="index.html">首頁</a>
+      <a class="nav__link" href="courses.html" aria-current="page">課程總覽</a>
+      <a class="nav__link" href="about.html">關於教室</a>
+      <a class="nav__link" href="faq.html">常見問題</a>
+    </nav>
+    <button class="saved-btn" type="button" id="savedBtn" aria-expanded="false" aria-controls="savedDrawer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 4.2 12.9a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.8.8.8-.8a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7z"/></svg>
+      <span>收藏</span>
+      <span class="saved-btn__count" id="savedCount" data-empty>0</span>
+    </button>
+    <a class="btn btn--primary btn--sm" href="courses.html">立即報名</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <nav aria-label="麵包屑">
+      <ol class="crumb">
+        <li><a href="index.html">首頁</a></li>
+        <li aria-current="page">課程總覽</li>
+      </ol>
+    </nav>
+    <h1 style="margin-top:var(--s-3)">課程總覽</h1>
+    <p class="page-head__meta">用左側條件收斂範圍，找到適合你的實體課程。所有課程皆為台北大安教室現場授課。</p>
+  </div>
+</div>
+
+<main id="main">
+<div class="container shell-filter">
+
+  <!-- ================================================== Filter sidebar -->
+  <aside class="sticky-col">
+    <form class="filters" id="filters" aria-label="課程篩選">
+      <div class="filters__head">
+        <h2>篩選條件</h2>
+        <button class="filters__reset" type="button" id="resetAll">清除全部</button>
+      </div>
+
+      <div class="fgroup">
+        <h3>關鍵字</h3>
+        <div class="search-field">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="kw">搜尋課程名稱</label>
+          <input type="search" id="kw" name="kw" placeholder="例如：吐司、乳酪">
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <h3>課程類型</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox" name="cat" value="bread"><span>麵包</span><span class="count">3</span></label></li>
+          <li><label class="check"><input type="checkbox" name="cat" value="cake"><span>蛋糕</span><span class="count">2</span></label></li>
+          <li><label class="check"><input type="checkbox" name="cat" value="cookie"><span>餅乾</span><span class="count">1</span></label></li>
+          <li><label class="check"><input type="checkbox" name="cat" value="tart"><span>塔派</span><span class="count">1</span></label></li>
+          <li><label class="check"><input type="checkbox" name="cat" value="nobake"><span>免烤甜點</span><span class="count">1</span></label></li>
+          <li><label class="check"><input type="checkbox" name="cat" value="pro"><span>證照班</span><span class="count">1</span></label></li>
+        </ul>
+      </div>
+
+      <div class="fgroup">
+        <h3>難度</h3>
+        <ul>
+          <li><label class="check"><input type="radio" name="lv" value="" checked><span>全部</span></label></li>
+          <li><label class="check"><input type="radio" name="lv" value="beginner"><span>入門・沒經驗可上</span></label></li>
+          <li><label class="check"><input type="radio" name="lv" value="advanced"><span>進階・需基礎</span></label></li>
+          <li><label class="check"><input type="radio" name="lv" value="pro"><span>專業・證照導向</span></label></li>
+        </ul>
+      </div>
+
+      <div class="fgroup">
+        <h3>上課時段</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox" name="time" value="wd-day"><span>平日白天</span></label></li>
+          <li><label class="check"><input type="checkbox" name="time" value="wd-night"><span>平日晚間</span></label></li>
+          <li><label class="check"><input type="checkbox" name="time" value="weekend"><span>週末</span></label></li>
+        </ul>
+      </div>
+
+      <div class="fgroup">
+        <h3>價格</h3>
+        <ul>
+          <li><label class="check"><input type="radio" name="price" value="" checked><span>不限</span></label></li>
+          <li><label class="check"><input type="radio" name="price" value="a"><span>NT$1,500 以下</span></label></li>
+          <li><label class="check"><input type="radio" name="price" value="b"><span>NT$1,500–2,500</span></label></li>
+          <li><label class="check"><input type="radio" name="price" value="c"><span>NT$2,500–4,000</span></label></li>
+          <li><label class="check"><input type="radio" name="price" value="d"><span>NT$4,000 以上</span></label></li>
+        </ul>
+      </div>
+
+      <div class="fgroup">
+        <label class="check"><input type="checkbox" name="avail" value="1"><span>只看尚有名額</span></label>
+      </div>
+    </form>
+  </aside>
+
+  <!-- ====================================================== Results -->
+  <section aria-label="課程搜尋結果">
+    <div class="toolbar">
+      <p class="toolbar__count">找到 <strong id="count">9</strong> 堂課程</p>
+      <div>
+        <label class="sr-only" for="sort">排序方式</label>
+        <select id="sort">
+          <option value="recommend">推薦排序</option>
+          <option value="price-asc">價格：低到高</option>
+          <option value="price-desc">價格：高到低</option>
+          <option value="newest">最新開課</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="active-chips" id="activeChips" aria-live="polite"></div>
+
+    <div class="grid grid--results results" id="results">
+
+      <article class="course-card" data-cat="bread" data-lv="beginner" data-time="weekend" data-price="1880" data-seats="2" data-new="3" data-rank="1" data-title="日式生吐司 從麵團到出爐 吐司">
+        <div class="course-card__media"><img src="assets/images/course-1.svg" alt="日式生吐司課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">麵包</span><span class="tag tag--level">入門</span></div>
+          <h3 class="course-card__title"><a href="course.html">日式生吐司・從麵團到出爐</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜陳孟蓁</span><span>3.5 小時・週末</span><span>最近梯次｜9/06（六）10:00</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$1,880 <del>2,200</del></span>
+            <span class="seat seat--low">剩 2 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="cake" data-lv="beginner" data-time="weekend" data-price="2280" data-seats="4" data-new="5" data-rank="2" data-title="鮮奶油抹面 六吋戚風蛋糕 抹面">
+        <div class="course-card__media"><img src="assets/images/course-2.svg" alt="鮮奶油抹面蛋糕課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">蛋糕</span><span class="tag tag--level">入門</span></div>
+          <h3 class="course-card__title"><a href="course.html">鮮奶油抹面・六吋戚風蛋糕</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜林韋辰</span><span>4 小時・週末</span><span>最近梯次｜9/13（六）13:30</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$2,280</span>
+            <span class="seat seat--ok">剩 4 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="bread" data-lv="advanced" data-time="weekend" data-price="3480" data-seats="0" data-new="7" data-rank="3" data-title="法式可頌 三摺四次的層次 可頌">
+        <div class="course-card__media"><img src="assets/images/course-5.svg" alt="法式可頌課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">麵包</span><span class="tag tag--level">進階</span></div>
+          <h3 class="course-card__title"><a href="course.html">法式可頌・三摺四次的層次</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜陳孟蓁</span><span>6 小時・週末</span><span>最近梯次｜9/20（六）09:30</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$3,480</span>
+            <span class="seat seat--full">已額滿</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="cookie" data-lv="beginner" data-time="wd-day" data-price="1580" data-seats="6" data-new="2" data-rank="4" data-title="手工餅乾禮盒 四種口味 餅乾">
+        <div class="course-card__media"><img src="assets/images/course-3.svg" alt="手工餅乾禮盒課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">餅乾</span><span class="tag tag--level">入門</span></div>
+          <h3 class="course-card__title"><a href="course.html">手工餅乾禮盒・一次做四種口味</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜黃品萱</span><span>3 小時・平日白天</span><span>最近梯次｜9/09（二）10:00</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$1,580</span>
+            <span class="seat seat--ok">剩 6 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="tart" data-lv="advanced" data-time="wd-night" data-price="2680" data-seats="3" data-new="6" data-rank="5" data-title="法式檸檬塔 從塔皮開始 檸檬塔">
+        <div class="course-card__media"><img src="assets/images/course-4.svg" alt="法式檸檬塔課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">塔派</span><span class="tag tag--level">進階</span></div>
+          <h3 class="course-card__title"><a href="course.html">法式檸檬塔・從塔皮開始做</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜林韋辰</span><span>4 小時・平日晚間</span><span>最近梯次｜9/11（四）18:30</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$2,680</span>
+            <span class="seat seat--ok">剩 3 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="nobake" data-lv="beginner" data-time="wd-night" data-price="1280" data-seats="5" data-new="1" data-rank="6" data-title="免烤生乳酪蛋糕 乳酪 免烤">
+        <div class="course-card__media"><img src="assets/images/course-6.svg" alt="免烤生乳酪蛋糕課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">免烤甜點</span><span class="tag tag--level">入門</span></div>
+          <h3 class="course-card__title"><a href="course.html">免烤生乳酪蛋糕・兩小時完成</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜黃品萱</span><span>2 小時・平日晚間</span><span>最近梯次｜9/04（四）19:00</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$1,280</span>
+            <span class="seat seat--ok">剩 5 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="bread" data-lv="advanced" data-time="weekend" data-price="3180" data-seats="1" data-new="8" data-rank="7" data-title="歐式酸種麵包 養菌與整形 酸種">
+        <div class="course-card__media"><img src="assets/images/course-1.svg" alt="歐式酸種麵包課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">麵包</span><span class="tag tag--level">進階</span></div>
+          <h3 class="course-card__title"><a href="course.html">歐式酸種麵包・養菌與整形</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜陳孟蓁</span><span>5 小時・週末</span><span>最近梯次｜9/27（六）09:00</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$3,180</span>
+            <span class="seat seat--low">剩 1 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="pro" data-lv="pro" data-time="wd-day" data-price="12800" data-seats="4" data-new="9" data-rank="8" data-title="丙級烘焙食品證照班 麵包項 證照">
+        <div class="course-card__media"><img src="assets/images/course-5.svg" alt="丙級烘焙食品證照班" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">證照班</span><span class="tag tag--level">專業</span></div>
+          <h3 class="course-card__title"><a href="course.html">丙級烘焙食品證照班（麵包項）</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜陳孟蓁</span><span>48 小時・平日白天</span><span>最近梯次｜10/06（一）09:00</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$12,800 <small>／全期</small></span>
+            <span class="seat seat--ok">剩 4 位</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-cat="cake" data-lv="beginner" data-time="wd-night" data-price="1480" data-seats="8" data-new="4" data-rank="9" data-title="巴斯克乳酪蛋糕 一次上手 巴斯克">
+        <div class="course-card__media"><img src="assets/images/course-2.svg" alt="巴斯克乳酪蛋糕課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">蛋糕</span><span class="tag tag--level">入門</span></div>
+          <h3 class="course-card__title"><a href="course.html">巴斯克乳酪蛋糕・一次上手</a></h3>
+          <div class="course-card__meta">
+            <span>講師｜林韋辰</span><span>2.5 小時・平日晚間</span><span>最近梯次｜9/18（四）19:00</span>
+          </div>
+          <div class="course-card__foot">
+            <span class="price">NT$1,480</span>
+            <span class="seat seat--ok">剩 8 位</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="no-results" id="noResults" hidden>
+      <h3>沒有符合條件的課程</h3>
+      <p>試著放寬難度或價格範圍，或先看看所有課程。</p>
+      <p style="margin-top:var(--s-5)"><button class="btn btn--ghost" type="button" id="resetEmpty">清除全部篩選</button></p>
+    </div>
+
+    <nav class="pager" aria-label="分頁">
+      <span aria-current="page">1</span>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">下一頁</a>
+    </nav>
+  </section>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">
+          <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+          <span class="logo__name">暖麥烘焙教室</span>
+        </div>
+        <p class="footer__tag">Warm Wheat Baking Studio<br>台北大安・小班制實體烘焙課程</p>
+      </div>
+      <div>
+        <h3>課程分類</h3>
+        <ul>
+          <li><a href="courses.html?cat=bread">麵包課程</a></li>
+          <li><a href="courses.html?cat=cake">蛋糕課程</a></li>
+          <li><a href="courses.html?cat=cookie">餅乾課程</a></li>
+          <li><a href="courses.html?cat=tart">塔派課程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>教室資訊</h3>
+        <ul>
+          <li><a href="about.html">關於暖麥</a></li>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="enroll.html#assess">報名前評估</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>聯絡我們</h3>
+        <ul>
+          <li>台北市大安區新生南路二段 00 號 3 樓</li>
+          <li><a href="tel:+886227000000">02-2700-0000</a></li>
+          <li><a href="mailto:hello@warmwheat.example">hello@warmwheat.example</a></li>
+          <li>週二 – 週日 10:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 暖麥烘焙教室 Warm Wheat Baking Studio.</p>
+  </div>
+</footer>
+
+<div class="drawer" id="savedDrawer" role="dialog" aria-modal="true" aria-label="收藏的課程">
+  <div class="drawer__scrim"></div>
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <h2 style="font-size:var(--fs-h3); font-family:var(--font-sans)">收藏的課程</h2>
+      <button class="drawer__close" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="drawer__body">
+      <div id="savedList"></div>
+      <p class="drawer__empty" id="savedEmpty">還沒有收藏任何課程。<br>在課程卡片右上角點愛心即可加入。</p>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--block" href="courses.html">瀏覽全部課程</a>
+    </div>
+  </div>
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/saved.js"></script>
+<script src="scripts/courses.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日式生吐司・從麵團到出爐｜暖麥烘焙教室</title>
+<meta name="description" content="3.5 小時完成一條日式生吐司，從攪拌、基礎發酵、整形到出爐。小班制 6 人，材料器具全附，成品帶回家。">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+      <span class="logo__name">暖麥烘焙教室</span>
+    </a>
+    <nav class="nav" aria-label="主選單">
+      <a class="nav__link" href="index.html">首頁</a>
+      <a class="nav__link" href="courses.html" aria-current="page">課程總覽</a>
+      <a class="nav__link" href="about.html">關於教室</a>
+      <a class="nav__link" href="faq.html">常見問題</a>
+    </nav>
+    <button class="saved-btn" type="button" id="savedBtn" aria-expanded="false" aria-controls="savedDrawer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 4.2 12.9a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.8.8.8-.8a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7z"/></svg>
+      <span>收藏</span>
+      <span class="saved-btn__count" id="savedCount" data-empty>0</span>
+    </button>
+    <a class="btn btn--primary btn--sm" href="courses.html">立即報名</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <nav aria-label="麵包屑">
+      <ol class="crumb">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="courses.html">課程總覽</a></li>
+        <li><a href="courses.html?cat=bread">麵包</a></li>
+        <li aria-current="page">日式生吐司</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+<div class="container shell-detail">
+
+  <!-- ====================================================== Article -->
+  <article>
+    <div class="detail-hero">
+      <img src="assets/images/course-main.svg" alt="剛出爐的日式生吐司與模具" width="1280" height="720">
+    </div>
+
+    <h1 class="detail-title">日式生吐司・從麵團到出爐</h1>
+    <div class="detail-tags">
+      <span class="tag">麵包</span>
+      <span class="tag tag--level">入門・沒經驗可上</span>
+      <span class="tag tag--plain">3.5 小時</span>
+      <span class="tag tag--plain">每班上限 6 人</span>
+      <span class="tag tag--plain">台北大安教室</span>
+    </div>
+
+    <div class="block">
+      <p>
+        生吐司之所以「生」，不是因為沒烤熟，而是因為含水量高、組織細，
+        撕開時會拉出一層一層的薄膜，不烤也好吃。這堂課會帶你完整做完一條，
+        從秤粉開始，不使用預拌粉。
+      </p>
+      <p>
+        這是一堂<strong>設計給沒有烘焙經驗的人</strong>的課。攪拌機的操作、麵團該揉到什麼程度、
+        發酵好了長什麼樣子，老師都會先示範一次，再讓你自己動手做一次。
+        課程結束時，你會帶走一條 12 兩的生吐司，以及一份可以在家重做的完整配方。
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>這堂課你會做出什麼</h2>
+      <div class="grid grid--3">
+        <div class="outcome">
+          <span class="outcome__n">01</span>
+          <h3>12 兩日式生吐司 ×1</h3>
+          <p>使用湯種法，含水量 75%,冷卻後裝盒帶回。</p>
+        </div>
+        <div class="outcome">
+          <span class="outcome__n">02</span>
+          <h3>小奶油餐包 ×4</h3>
+          <p>用同一份麵團分割整形，當天就可以吃。</p>
+        </div>
+        <div class="outcome">
+          <span class="outcome__n">03</span>
+          <h3>可在家重做的配方卡</h3>
+          <p>含家用烤箱的溫度換算與失敗排查表。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>課程內容</h2>
+      <ol class="syllabus">
+        <li>
+          <span class="syllabus__n">01</span>
+          <span class="syllabus__t">認識材料與湯種製作<span>高筋麵粉、酵母、糖鹽的作用，現場煮一鍋湯種</span></span>
+          <span class="syllabus__d">30 分</span>
+        </li>
+        <li>
+          <span class="syllabus__n">02</span>
+          <span class="syllabus__t">攪拌與判斷麵團狀態<span>從捲起到完全擴展，學會用手撕薄膜判斷</span></span>
+          <span class="syllabus__d">40 分</span>
+        </li>
+        <li>
+          <span class="syllabus__n">03</span>
+          <span class="syllabus__t">基礎發酵與分割滾圓<span>發酵箱使用、手指測試、分割重量控制</span></span>
+          <span class="syllabus__d">50 分</span>
+        </li>
+        <li>
+          <span class="syllabus__n">04</span>
+          <span class="syllabus__t">整形入模與最後發酵<span>三摺整形、入模方向，以及何時該進烤箱</span></span>
+          <span class="syllabus__d">50 分</span>
+        </li>
+        <li>
+          <span class="syllabus__n">05</span>
+          <span class="syllabus__t">烘烤、脫模與保存<span>上下火設定、出爐震模、冷卻與冷凍保存方式</span></span>
+          <span class="syllabus__d">40 分</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h2>當天流程</h2>
+      <ol class="syllabus">
+        <li><span class="syllabus__n">09:50</span><span class="syllabus__t">教室報到、換圍裙洗手</span><span class="syllabus__d"></span></li>
+        <li><span class="syllabus__n">10:00</span><span class="syllabus__t">課程開始，材料介紹與示範</span><span class="syllabus__d"></span></li>
+        <li><span class="syllabus__n">11:20</span><span class="syllabus__t">發酵等待時間，老師講解在家操作的差異</span><span class="syllabus__d"></span></li>
+        <li><span class="syllabus__n">12:40</span><span class="syllabus__t">入爐烘烤，同時清理工作檯</span><span class="syllabus__d"></span></li>
+        <li><span class="syllabus__n">13:30</span><span class="syllabus__t">出爐、拍照、裝盒，課程結束</span><span class="syllabus__d"></span></li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h2>器具與材料</h2>
+      <div class="kit">
+        <div>
+          <h3>教室提供（已含在學費）</h3>
+          <ul>
+            <li>攪拌機、發酵箱、專業烤箱</li>
+            <li>吐司模具、刮板、電子秤、溫度計</li>
+            <li>所有食材（麵粉、奶油、鮮奶、酵母）</li>
+            <li>圍裙、手套、成品包裝盒與提袋</li>
+          </ul>
+        </div>
+        <div>
+          <h3>請自行準備</h3>
+          <ul>
+            <li>綁得起來的長髮髮圈</li>
+            <li>好活動的衣物，建議不要穿寬袖</li>
+            <li>如需拍照，請自備手機或相機</li>
+            <li>裝生吐司的提袋教室有附，不需另帶</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>講師</h2>
+      <div class="instructor">
+        <img src="assets/images/instructor.svg" alt="講師 陳孟蓁" width="104" height="104">
+        <div>
+          <h3>陳孟蓁</h3>
+          <p class="instructor__role">暖麥主廚講師・麵包項目</p>
+          <p>
+            在日本東京的町パン店工作四年，回台後專注於高含水量吐司與酸種麵包。
+            教學風格偏向「先講原理再動手」，喜歡把失敗的麵團也帶到課堂上，
+            讓大家知道什麼叫做不對。累積授課超過 600 小時。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>注意事項</h2>
+      <div class="notice">
+        <ul>
+          <li><strong>過敏原提醒：</strong>本課程使用小麥、乳製品、蛋。教室同時處理堅果類產品，無法完全避免交叉接觸。</li>
+          <li>課程含高溫烤箱操作，未滿 12 歲需由家長全程陪同（陪同者不另計費，但無工作檯位）。</li>
+          <li>開課前 7 天可全額退費；7 天內至前 1 天退 70%;當日未到恕不退費，可改期一次。</li>
+          <li>遲到超過 30 分鐘將無法跟上發酵進度，建議改期。</li>
+          <li>教室不提供停車位，建議搭乘捷運至大安森林公園站 3 號出口。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block" id="faq">
+      <h2>常見問題</h2>
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a1" id="q1">完全沒有做過麵包，可以直接上這堂嗎？</button>
+          <div class="faq__a" id="a1" role="region" aria-labelledby="q1" hidden>
+            可以。這堂課就是為零經驗設計的，所有步驟都會示範。如果你不確定，
+            可以先做<a href="enroll.html#assess" class="link-arrow">報名前評估</a>,系統會依你的經驗給建議。
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a2" id="q2">一個人報名會不會很奇怪？</button>
+          <div class="faq__a" id="a2" role="region" aria-labelledby="q2" hidden>
+            不會，大約一半的同學都是自己來。每個人有獨立的工作檯，不需要跟別人共用麵團。
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a3" id="q3">家裡只有小烤箱，回家做得出來嗎？</button>
+          <div class="faq__a" id="a3" role="region" aria-labelledby="q3" hidden>
+            配方卡上附有家用烤箱的溫度與時間換算，以及不同容量烤箱的調整建議。
+            課堂上老師也會針對常見的家用機型說明。
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a4" id="q4">可以幫朋友一起報名嗎？</button>
+          <div class="faq__a" id="a4" role="region" aria-labelledby="q4" hidden>
+            可以，報名時在「同行人數」填寫人數即可，系統會一併保留相鄰的工作檯位。
+            每人仍需各自付費。
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a5" id="q5">吃素或對乳製品過敏，有替代方案嗎？</button>
+          <div class="faq__a" id="a5" role="region" aria-labelledby="q5" hidden>
+            生吐司配方需要奶油與鮮奶，無法替換。建議改上「歐式酸種麵包」，
+            該課程為純素配方。報名前評估中填寫過敏資訊後，系統會提醒你。
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================================================= Booking card -->
+  <aside class="sticky-col">
+    <div class="booking">
+      <div class="booking__price">
+        <span class="price">NT$1,880</span>
+        <del class="muted small">NT$2,200</del>
+      </div>
+      <p class="muted small" style="margin-top:var(--s-2)">早鳥價至 8/31,含全部材料與器具</p>
+
+      <p class="booking__label">選擇梯次</p>
+      <div class="session">
+        <label class="session__item">
+          <input type="radio" name="session" value="0906" checked>
+          <span class="session__box">
+            <span class="session__date">9/06（六）10:00<span>3.5 小時・陳孟蓁</span></span>
+            <span class="seat seat--low">剩 2 位</span>
+          </span>
+        </label>
+        <label class="session__item">
+          <input type="radio" name="session" value="0920">
+          <span class="session__box">
+            <span class="session__date">9/20（六）14:00<span>3.5 小時・陳孟蓁</span></span>
+            <span class="seat seat--ok">剩 5 位</span>
+          </span>
+        </label>
+        <label class="session__item">
+          <input type="radio" name="session" value="1004" disabled>
+          <span class="session__box">
+            <span class="session__date">10/04（六）10:00<span>3.5 小時・陳孟蓁</span></span>
+            <span class="seat seat--full">已額滿</span>
+          </span>
+        </label>
+      </div>
+
+      <a class="btn btn--primary btn--block" href="enroll.html#assess">前往報名</a>
+      <p class="booking__note">報名前會先做一分鐘適合度評估</p>
+
+      <dl class="spec">
+        <div><dt>課程時長</dt><dd>3.5 小時</dd></div>
+        <div><dt>人數上限</dt><dd>6 人</dd></div>
+        <div><dt>難度</dt><dd>入門</dd></div>
+        <div><dt>上課地點</dt><dd>台北大安教室</dd></div>
+        <div><dt>授課語言</dt><dd>中文</dd></div>
+        <div><dt>成品</dt><dd>吐司 1 條 + 餐包 4 個</dd></div>
+      </dl>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ==================================================== Related -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="section__head section__head--row">
+      <div><h2>看過這堂的人也看了</h2></div>
+      <a class="link-arrow" href="courses.html">看全部課程</a>
+    </div>
+    <div class="grid grid--3">
+      <article class="course-card">
+        <div class="course-card__media"><img src="assets/images/course-1.svg" alt="歐式酸種麵包課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">麵包</span><span class="tag tag--level">進階</span></div>
+          <h3 class="course-card__title"><a href="course.html">歐式酸種麵包・養菌與整形</a></h3>
+          <div class="course-card__meta"><span>講師｜陳孟蓁</span><span>5 小時・週末</span></div>
+          <div class="course-card__foot"><span class="price">NT$3,180</span><span class="seat seat--low">剩 1 位</span></div>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-card__media"><img src="assets/images/course-5.svg" alt="法式可頌課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">麵包</span><span class="tag tag--level">進階</span></div>
+          <h3 class="course-card__title"><a href="course.html">法式可頌・三摺四次的層次</a></h3>
+          <div class="course-card__meta"><span>講師｜陳孟蓁</span><span>6 小時・週末</span></div>
+          <div class="course-card__foot"><span class="price">NT$3,480</span><span class="seat seat--full">已額滿</span></div>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-card__media"><img src="assets/images/course-3.svg" alt="手工餅乾禮盒課程" width="480" height="360" loading="lazy"></div>
+        <div class="course-card__body">
+          <div class="course-card__tags"><span class="tag">餅乾</span><span class="tag tag--level">入門</span></div>
+          <h3 class="course-card__title"><a href="course.html">手工餅乾禮盒・一次做四種口味</a></h3>
+          <div class="course-card__meta"><span>講師｜黃品萱</span><span>3 小時・平日白天</span></div>
+          <div class="course-card__foot"><span class="price">NT$1,580</span><span class="seat seat--ok">剩 6 位</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">
+          <img src="assets/brand/logo.svg" alt="" width="30" height="30">
+          <span class="logo__name">暖麥烘焙教室</span>
+        </div>
+        <p class="footer__tag">Warm Wheat Baking Studio<br>台北大安・小班制實體烘焙課程</p>
+      </div>
+      <div>
+        <h3>課程分類</h3>
+        <ul>
+          <li><a href="courses.html?cat=bread">麵包課程</a></li>
+          <li><a href="courses.html?cat=cake">蛋糕課程</a></li>
+          <li><a href="courses.html?cat=cookie">餅乾課程</a></li>
+          <li><a href="courses.html?cat=tart">塔派課程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>教室資訊</h3>
+        <ul>
+          <li><a href="about.html">關於暖麥</a></li>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="enroll.html#assess">報名前評估</a></li>
+          <li><a href="courses.html">課程總覽</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>聯絡我們</h3>
+        <ul>
+          <li>台北市大安區新生南路二段 00 號 3 樓</li>
+          <li><a href="tel:+886227000000">02-2700-0000</a></li>
+          <li><a href="mailto:hello@warmwheat.example">hello@warmwheat.example</a></li>
+          <li>週二 – 週日 10:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 暖麥烘焙教室 Warm Wheat Baking Studio.</p>
+  </div>
+</footer>
+
+<div class="drawer" id="savedDrawer" role="dialog" aria-modal="true" aria-label="收藏的課程">
+  <div class="drawer__scrim"></div>
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <h2 style="font-size:var(--fs-h3); font-family:var(--font-sans)">收藏的課程</h2>
+      <button class="drawer__close" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="drawer__body">
+      <div id="savedList"></div>
+      <p class="drawer__empty" id="savedEmpty">還沒有收藏任何課程。<br>在課程卡片右上角點愛心即可加入。</p>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--block" href="courses.html">瀏覽全部課程</a>
+    </div>
+  </div>
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/saved.js"></script>
+</body>
+</html>
