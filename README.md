@@ -4,6 +4,8 @@ A course-booking front end for a fictional Taipei baking studio — built as a
 front-end demo. Hand-coded vanilla **HTML / CSS / JS**, no framework, no build step.
 Open `index.html` and it runs.
 
+**🔗 Live demo: [warmwheat-baking.vercel.app](https://warmwheat-baking.vercel.app)**
+
 ![Warm Wheat Baking Studio — homepage](assets/preview.png)
 
 > **Note:** This is a portfolio demo. The studio, courses, instructors, prices,
