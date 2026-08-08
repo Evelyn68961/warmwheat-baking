@@ -988,3 +988,51 @@
   .team { grid-template-columns: minmax(0, 1fr); }
   .saved-btn span:not(.saved-btn__count) { display: none; }
 }
+
+/* ==========================================================================
+   LINE contact — floating action button + contact block
+   In Taiwan small businesses convert on LINE 官方帳號 rather than web forms,
+   so it gets a persistent entry point rather than a footer link.
+   ========================================================================== */
+
+.line-fab {
+  position: fixed;
+  right: var(--s-6);
+  bottom: var(--s-6);
+  z-index: 70;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-5);
+  background: #06C755;
+  border-radius: var(--r-pill);
+  color: #fff;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(6, 199, 85, .35);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+.line-fab:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(6, 199, 85, .45);
+}
+.line-fab svg { flex: none; }
+
+.line-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-6);
+  background: #06C755;
+  border-radius: var(--r-pill);
+  color: #fff;
+  font-weight: 600;
+  font-size: var(--fs-body);
+}
+.line-inline:hover { background: #05B34C; color: #fff; }
+
+@media (max-width: 720px) {
+  .line-fab { right: var(--s-4); bottom: var(--s-4); padding: var(--s-3); }
+  .line-fab span { display: none; }
+}

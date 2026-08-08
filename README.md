@@ -11,10 +11,29 @@ Open `index.html` and it runs.
 > **Note:** This is a portfolio demo. The studio, courses, instructors, prices,
 > schedules and testimonials are all fictional placeholder content.
 
-## The problem this site solves
+## Why this exists
 
-A baking studio's site has to do three jobs in order, and most of them only do the
-first one well:
+I read five real Taiwanese baking-class sites before designing this one. They fail in
+the same three places:
+
+| | [cotton-cake](https://www.cotton-cake.com.tw/) | [best-168](https://www.best-168.com.tw/) |
+|---|---|---|
+| Price on course listings | ✗ | ✗ |
+| Any filter or search | ✗ | ✗ |
+| Clear path to enrol | ✗ | ✗ (phone only) |
+
+創業家烘焙 has been running **35 years** and still shows no price, no dates, no class
+size and no enrol button on its listings. Even [Bread Ahead](https://www.breadahead.com/)
+in London — the best-in-class benchmark — shows no class size, no day-of timetable, no
+kit list and no FAQ on its course pages.
+
+So this demo prices every course, filters nine of them six ways, and screens for fit
+*before* it takes a booking.
+
+## The three jobs
+
+A baking studio's site has to do three things in order, and most sites only do the
+first one badly:
 
 | | Page | What the visitor is actually doing |
 |---|---|---|
@@ -41,6 +60,11 @@ that will"** — and it never hard-blocks, because it's advice, not a gate.
 - **Saved courses** — heart a course from any page; count, drawer and hearts all render
   from one array so they can't drift out of sync. Persisted in `localStorage`, degrades
   quietly in private mode.
+- **Structured data** — `Course` with `CourseInstance` offers and seat availability,
+  `FAQPage`, `ItemList` and `LocalBusiness` JSON-LD. None of the competitor sites
+  reviewed carry any.
+- **LINE as a first-class channel** — Taiwanese small businesses convert on LINE
+  官方帳號, not web forms, so it gets a persistent CTA rather than a footer link.
 - **Token-first CSS** — every colour, type step, spacing unit and radius lives in
   `styles/tokens.css` as custom properties; the whole site re-themes from one file.
 - **Progressive enhancement** — controls that need JS (save, quick filters) are
