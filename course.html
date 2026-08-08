@@ -57,6 +57,58 @@
         "priceCurrency": "TWD",
         "availability": "https://schema.org/InStock"
       }
+    },
+    {
+      "@type": "CourseInstance",
+      "courseMode": "Onsite",
+      "startDate": "2026-10-04T10:00",
+      "endDate": "2026-10-04T13:30",
+      "location": { "@type": "Place", "name": "暖麥烘焙教室 台北大安" },
+      "instructor": { "@type": "Person", "name": "陳孟蓁" },
+      "maximumAttendeeCapacity": 6,
+      "offers": {
+        "@type": "Offer",
+        "price": "1880",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/SoldOut"
+      }
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "48",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Yuting" },
+      "datePublished": "2026-07-19",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "完全沒有烘焙經驗也跟得上。攪拌到什麼程度算好，老師會直接把麵團拿到你面前讓你摸，比看影片清楚太多。吐司帶回家隔天還是軟的。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ching-Wen" },
+      "datePublished": "2026-07-05",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "六個人剛剛好，每個人都有自己的攪拌缸，不用排隊等器具。發酵等待的時間老師會講原理，不是放你在旁邊滑手機。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "阿翰" },
+      "datePublished": "2026-06-21",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "課程本身沒話說，但三個半小時真的滿趕的，最後整形的部分有點匆忙。建議大家提早十分鐘到，不然換圍裙洗手就開始了。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Michelle" },
+      "datePublished": "2026-06-07",
+      "reviewRating": { "@type": "Rating", "ratingValue": "3", "bestRating": "5" },
+      "reviewBody": "教室偏小，六個人加老師走動的時候會撞到。課教得很好，只是空間跟照片看起來不太一樣，先講一下比較好。"
     }
   ]
 }
@@ -285,6 +337,72 @@
         </div>
       </div>
     </div>
+
+    <!-- ============================================ Course reviews -->
+    <!-- Course-level, not studio-level: 44+3+1 = 48 reviews of *this* course,
+         weighted mean 235/48 = 4.90. The same figures appear in the Course
+         JSON-LD's aggregateRating. The homepage carries the studio-wide
+         4.8 / 312 separately; the two are not interchangeable. -->
+    <div class="block" id="reviews">
+      <h2>上過這堂課的人怎麼說</h2>
+
+      <div class="rating-summary">
+        <div class="rating-summary__score">
+          <strong class="rating-summary__num">4.9</strong>
+          <div class="stars" role="img" aria-label="平均 4.9 顆星，滿分 5 顆星">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="stars__fill" style="width:98%" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="rating-summary__count">48 則完課評價</p>
+        </div>
+        <div class="rating-bars">
+          <div class="rating-bar"><span>5 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:91.7%"></span></span><span class="rating-bar__n">44</span></div>
+          <div class="rating-bar"><span>4 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:6.3%"></span></span><span class="rating-bar__n">3</span></div>
+          <div class="rating-bar"><span>3 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:2.1%"></span></span><span class="rating-bar__n">1</span></div>
+          <div class="rating-bar"><span>2 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:0"></span></span><span class="rating-bar__n">0</span></div>
+          <div class="rating-bar"><span>1 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:0"></span></span><span class="rating-bar__n">0</span></div>
+        </div>
+      </div>
+
+      <div class="review-list">
+        <div class="review">
+          <div class="review__head">
+            <div class="review__stars" role="img" aria-label="五顆星">★★★★★</div>
+            <span class="review__date">2026-07-19</span>
+          </div>
+          <p>「完全沒有烘焙經驗也跟得上。攪拌到什麼程度算好，老師會直接把麵團拿到你面前讓你摸，比看影片清楚太多。吐司帶回家隔天還是軟的。」</p>
+          <footer><cite>Yuting</cite>7/19（六）10:00 梯次</footer>
+          <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
+        </div>
+        <div class="review">
+          <div class="review__head">
+            <div class="review__stars" role="img" aria-label="五顆星">★★★★★</div>
+            <span class="review__date">2026-07-05</span>
+          </div>
+          <p>「六個人剛剛好，每個人都有自己的攪拌缸，不用排隊等器具。發酵等待的時間老師會講原理，不是放你在旁邊滑手機。」</p>
+          <footer><cite>Ching-Wen</cite>7/05（六）14:00 梯次</footer>
+          <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
+        </div>
+        <div class="review">
+          <div class="review__head">
+            <div class="review__stars" role="img" aria-label="四顆星">★★★★☆</div>
+            <span class="review__date">2026-06-21</span>
+          </div>
+          <p>「課程本身沒話說，但三個半小時真的滿趕的，最後整形的部分有點匆忙。建議大家提早十分鐘到，不然換圍裙洗手就開始了。」</p>
+          <footer><cite>阿翰</cite>6/21（六）10:00 梯次</footer>
+          <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
+        </div>
+        <div class="review">
+          <div class="review__head">
+            <div class="review__stars" role="img" aria-label="三顆星">★★★☆☆</div>
+            <span class="review__date">2026-06-07</span>
+          </div>
+          <p>「教室偏小，六個人加老師走動的時候會撞到。課教得很好，只是空間跟照片看起來不太一樣，先講一下比較好。」</p>
+          <footer><cite>Michelle</cite>6/07（六）14:00 梯次</footer>
+          <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
+        </div>
+      </div>
+    </div>
   </article>
 
   <!-- ================================================= Booking card -->
@@ -294,7 +412,17 @@
         <span class="price">NT$1,880</span>
         <del class="muted small">NT$2,200</del>
       </div>
-      <p class="muted small" style="margin-top:var(--s-2)">早鳥價至 8/31,含全部材料與器具</p>
+      <p class="muted small" style="margin-top:var(--s-2)">早鳥價至 8/31，含全部材料與器具</p>
+
+      <!-- Jumps to the review block rather than repeating it: the number is the
+           reassurance, the reviews are the evidence. -->
+      <a class="booking__rating" href="#reviews">
+        <span class="stars" role="img" aria-label="平均 4.9 顆星，滿分 5 顆星">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="stars__fill" style="width:98%" aria-hidden="true">★★★★★</span>
+        </span>
+        <span><strong>4.9</strong>・48 則完課評價</span>
+      </a>
 
       <p class="booking__label">選擇梯次</p>
       <div class="session">
@@ -312,7 +440,11 @@
             <span class="seat seat--ok">剩 5 位</span>
           </span>
         </label>
-        <label class="session__item">
+        <!-- data-queue is how many people are already waiting. scripts/waitlist.js
+             reads it to inject a 加入候補 button and to work out the position it
+             offers; without JS the row stays a plain, honestly-disabled option. -->
+        <label class="session__item" data-full data-session="1004"
+               data-date="10/04（六）10:00" data-queue="3">
           <input type="radio" name="session" value="1004" disabled>
           <span class="session__box">
             <span class="session__date">10/04（六）10:00<span>3.5 小時・陳孟蓁</span></span>
@@ -441,5 +573,6 @@
 
 <script src="scripts/main.js"></script>
 <script src="scripts/saved.js"></script>
+<script src="scripts/waitlist.js"></script>
 </body>
 </html>

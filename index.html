@@ -39,8 +39,33 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "reviewCount": "312"
-  }
+    "reviewCount": "312",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Yuting" },
+      "datePublished": "2026-07-19",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "完全沒有烘焙經驗也跟得上，老師會先示範一次再讓我們動手。吐司帶回家隔天還是軟的。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "建豪" },
+      "datePublished": "2026-07-02",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "報名前的評估很有用，本來想直接報可頌，系統建議我先上基礎班，結果真的比較順。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "怡君" },
+      "datePublished": "2026-06-28",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "抹面真的很難，但老師很有耐心地示範了三次。教室很乾淨，工具也都很新。"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -314,22 +339,58 @@
   <div class="container">
     <div class="section__head">
       <h2>學員回饋</h2>
+      <p>評價邀請只寄給實際完課的學員，所以每一則都對得上一筆報名紀錄。</p>
     </div>
-    <div class="grid grid--3">
+
+    <!-- These numbers and the aggregateRating in the LocalBusiness JSON-LD are
+         the same figures: 265+37+6+3+1 = 312 reviews, weighted mean
+         1498/312 = 4.80. Change one and the other has to change with it —
+         a rating in markup that isn't on the page is a policy violation. -->
+    <div class="rating-summary">
+      <div class="rating-summary__score">
+        <strong class="rating-summary__num">4.8</strong>
+        <div class="stars" role="img" aria-label="平均 4.8 顆星，滿分 5 顆星">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="stars__fill" style="width:96%" aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="rating-summary__count">312 則完課評價</p>
+      </div>
+      <div class="rating-bars">
+        <div class="rating-bar"><span>5 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:84.9%"></span></span><span class="rating-bar__n">265</span></div>
+        <div class="rating-bar"><span>4 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:11.9%"></span></span><span class="rating-bar__n">37</span></div>
+        <div class="rating-bar"><span>3 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:1.9%"></span></span><span class="rating-bar__n">6</span></div>
+        <div class="rating-bar"><span>2 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:1%"></span></span><span class="rating-bar__n">3</span></div>
+        <div class="rating-bar"><span>1 顆星</span><span class="rating-bar__track"><span class="rating-bar__fill" style="width:.3%"></span></span><span class="rating-bar__n">1</span></div>
+      </div>
+    </div>
+
+    <div class="grid grid--3" style="margin-top:var(--s-8)">
       <div class="review">
-        <div class="review__stars" aria-label="五顆星">★★★★★</div>
+        <div class="review__head">
+          <div class="review__stars" role="img" aria-label="五顆星">★★★★★</div>
+          <span class="review__date">2026-07-19</span>
+        </div>
         <p>「完全沒有烘焙經驗也跟得上，老師會先示範一次再讓我們動手。吐司帶回家隔天還是軟的。」</p>
-        <footer><cite>Yuting</cite>日式生吐司・8 月班</footer>
+        <footer><cite>Yuting</cite>日式生吐司・7 月班</footer>
+        <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
       </div>
       <div class="review">
-        <div class="review__stars" aria-label="五顆星">★★★★★</div>
+        <div class="review__head">
+          <div class="review__stars" role="img" aria-label="五顆星">★★★★★</div>
+          <span class="review__date">2026-07-02</span>
+        </div>
         <p>「報名前的評估很有用，本來想直接報可頌，系統建議我先上基礎班，結果真的比較順。」</p>
-        <footer><cite>建豪</cite>基礎麵團・7 月班</footer>
+        <footer><cite>建豪</cite>基礎麵團・6 月班</footer>
+        <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
       </div>
       <div class="review">
-        <div class="review__stars" aria-label="四顆星">★★★★☆</div>
+        <div class="review__head">
+          <div class="review__stars" role="img" aria-label="四顆星">★★★★☆</div>
+          <span class="review__date">2026-06-28</span>
+        </div>
         <p>「抹面真的很難，但老師很有耐心地示範了三次。教室很乾淨，工具也都很新。」</p>
-        <footer><cite>怡君</cite>鮮奶油抹面・8 月班</footer>
+        <footer><cite>怡君</cite>鮮奶油抹面・6 月班</footer>
+        <span class="review__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>已完課驗證</span>
       </div>
     </div>
   </div>

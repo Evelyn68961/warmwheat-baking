@@ -57,9 +57,18 @@ that will"** — and it never hard-blocks, because it's advice, not a gate.
 - **Eligibility assessment** — rule-based fit / caution / blocked verdicts driven by
   experience level, goal, schedule and allergens, feeding a four-step booking flow with
   per-step validation and a confirmation summary.
+- **Waitlist on full sessions** — the FAQ promises you can 候補 an 額滿 梯次 and be
+  contacted in order, so the site now does that instead of just disabling the radio.
+  Shows the real queue length, offers position *queue + 1*, and takes no payment —
+  matching what the FAQ says word for word.
 - **Saved courses** — heart a course from any page; count, drawer and hearts all render
   from one array so they can't drift out of sync. Persisted in `localStorage`, degrades
   quietly in private mode.
+- **Reviews that match their own markup** — a studio-wide 4.8 / 312 on the homepage and
+  a course-level 4.9 / 48 on the course page, each with a star distribution that sums to
+  the stated count and averages to the stated score. The `aggregateRating` in the JSON-LD
+  is the same data: a rating in markup that a visitor can't see on the page is a
+  structured-data policy violation, not a shortcut.
 - **Structured data** — `Course` with `CourseInstance` offers and seat availability,
   `FAQPage`, `ItemList` and `LocalBusiness` JSON-LD. None of the competitor sites
   reviewed carry any.
@@ -93,6 +102,7 @@ scripts/
   courses.js          filtering, search, sorting, active-filter chips
   enroll.js           assessment rules + 4-step booking flow
   saved.js            saved courses (localStorage) + drawer
+  waitlist.js         候補 flow for full sessions (injected modal + localStorage)
 assets/               placeholder SVG illustrations & icons
 ```
 

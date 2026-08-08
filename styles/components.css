@@ -746,6 +746,80 @@
 .cta-band p { margin-top: var(--s-3); color: rgba(255,255,255,.78); font-size: var(--fs-small); max-width: 42em; }
 .cta-band .btn--honey { flex: none; }
 
+/* ---- Stars ----
+   A row of grey stars with a gold copy clipped over the top, so a 4.8 average
+   renders as 4.8 instead of being rounded up to five filled stars. The trailing
+   letter-spacing is cancelled with a negative margin — without it the fill
+   percentage is measured against a box 2px wider than the glyphs. */
+.stars {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  color: var(--c-line);
+  white-space: nowrap;
+}
+.stars__fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--c-honey);
+}
+
+/* ---- Rating summary ---- */
+.rating-summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s-10);
+  align-items: center;
+  padding: var(--s-8);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-card);
+}
+.rating-summary__score { text-align: center; }
+.rating-summary__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--c-crust);
+}
+.rating-summary__score .stars { margin-top: var(--s-2); font-size: 1.05rem; }
+.rating-summary__count {
+  margin-top: var(--s-2);
+  font-size: var(--fs-small);
+  color: var(--c-ink-muted);
+}
+.rating-bars { display: grid; gap: var(--s-2); }
+.rating-bar {
+  display: grid;
+  grid-template-columns: 3.6em 1fr 3.2em;
+  gap: var(--s-3);
+  align-items: center;
+  font-size: var(--fs-small);
+  color: var(--c-ink-muted);
+}
+.rating-bar__track {
+  height: 8px;
+  background: var(--c-crust-soft);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+.rating-bar__fill {
+  display: block;
+  height: 100%;
+  background: var(--c-honey);
+  border-radius: var(--r-pill);
+}
+.rating-bar__n { text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 720px) {
+  .rating-summary { grid-template-columns: 1fr; gap: var(--s-6); }
+}
+
 /* ---- Review ---- */
 .review {
   padding: var(--s-6);
@@ -753,10 +827,46 @@
   border: 1px solid var(--c-line);
   border-radius: var(--r-card);
 }
+.review__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+.review__date { font-size: var(--fs-small); color: var(--c-ink-muted); font-variant-numeric: tabular-nums; }
 .review__stars { color: var(--c-honey); letter-spacing: 2px; }
 .review p { margin-top: var(--s-3); font-size: var(--fs-small); }
 .review footer { margin-top: var(--s-4); color: var(--c-ink-muted); font-size: var(--fs-small); }
 .review cite { display: block; font-style: normal; font-weight: 600; color: var(--c-ink); }
+.booking__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+  font-size: var(--fs-small);
+  color: var(--c-ink-muted);
+  text-decoration: none;
+}
+.booking__rating:hover { color: var(--c-crust); }
+.booking__rating strong { color: var(--c-ink); }
+
+/* Sits inside the course article column, so it wraps to one column rather than
+   forcing a fixed two-up that would squash against the sticky booking card. */
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-4);
+  margin-top: var(--s-6);
+}
+/* Only carried by reviews the studio can match back to a completed booking. */
+.review__verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: var(--s-3);
+  font-size: var(--fs-small);
+  color: var(--c-ok);
+}
 
 /* ----------------------------------------------------------------- Footer */
 .footer {
@@ -935,6 +1045,128 @@
 
 .drawer__empty { padding: var(--s-20) 0; text-align: center; color: var(--c-ink-muted); }
 .drawer__empty[hidden] { display: none; }
+
+/* --------------------------------------------------------------- Modal ----
+   Same scrim + panel structure as the drawer, centred instead of edge-anchored.
+   Built for the waitlist; nothing about it is waitlist-specific. */
+.modal { position: fixed; inset: 0; z-index: 90; visibility: hidden; }
+.modal[data-open] { visibility: visible; }
+.modal__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 40, 35, .42);
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+.modal[data-open] .modal__scrim { opacity: 1; }
+.modal__panel {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: min(420px, calc(100vw - 2 * var(--s-6)));
+  max-height: calc(100vh - 2 * var(--s-10));
+  overflow-y: auto;
+  background: var(--c-surface);
+  border-radius: var(--r-card);
+  box-shadow: 0 16px 48px rgba(46, 40, 35, .22);
+  transform: translate(-50%, calc(-50% + 12px));
+  opacity: 0;
+  transition: transform var(--t-base), opacity var(--t-base);
+}
+.modal[data-open] .modal__panel { transform: translate(-50%, -50%); opacity: 1; }
+.modal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  border-bottom: 1px solid var(--c-line);
+}
+.modal__head h2 { font-size: var(--fs-h3); font-family: var(--font-sans); }
+.modal__close {
+  display: grid;
+  place-items: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.modal__close:hover { background: var(--c-crust-soft); }
+.modal__body { padding: var(--s-6); }
+.modal__body .field + .field { margin-top: var(--s-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .modal__panel { transition: opacity var(--t-base); transform: translate(-50%, -50%); }
+}
+
+/* ---- Waitlist ---- */
+.wl-session {
+  padding: var(--s-3) var(--s-4);
+  margin-bottom: var(--s-5);
+  background: var(--c-oat);
+  border-radius: var(--r-input);
+  font-size: var(--fs-small);
+}
+.wl-session strong { display: block; }
+.wl-session span { color: var(--c-ink-muted); }
+.wl-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  font-size: var(--fs-small);
+  cursor: pointer;
+}
+.wl-check input { margin-top: 3px; accent-color: var(--c-crust); }
+.wl-terms {
+  margin-block: var(--s-4) var(--s-5);
+  color: var(--c-ink-muted);
+  font-size: var(--fs-small);
+}
+.wl-done { text-align: center; }
+.wl-done__icon {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  margin: 0 auto var(--s-4);
+  border-radius: 50%;
+  background: var(--c-honey-soft);
+  color: var(--c-ok);
+}
+.wl-done__icon svg { width: 22px; height: 22px; }
+.wl-done h3 { font-size: var(--fs-h3); }
+.wl-done__pos { margin-top: var(--s-2); color: var(--c-crust); font-weight: 600; }
+.wl-done__note {
+  margin-block: var(--s-4) var(--s-6);
+  color: var(--c-ink-muted);
+  font-size: var(--fs-small);
+}
+
+/* The injected row under a full session. */
+.wl-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-inline: var(--s-1);
+}
+.wl-joined {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--c-ok);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+.wl-leave {
+  color: var(--c-ink-muted);
+  font-size: var(--fs-small);
+  text-decoration: underline;
+}
+.wl-leave:hover { color: var(--c-warn); }
+
+/* A full session is no longer a dead end, so it should not be greyed out to
+   the point of being unreadable. */
+.session__item[data-full] input:disabled + .session__box { opacity: .68; }
 
 /* Toast */
 .toast {
