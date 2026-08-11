@@ -189,23 +189,53 @@
 
     var lastFocus = null;
 
-    var open = function () {
-      lastFocus = document.activeElement;
-      drawer.setAttribute('data-open', '');
-      openBtn.setAttribute('aria-expanded', 'true');
-      var close = drawer.querySelector('.drawer__close');
-      if (close) close.focus();
+    /* Same reasoning as the waitlist dialog: with the drawer open the page
+       behind the scrim still scrolls, so the panel stays put while the site
+       slides past underneath. The scrollbar's width goes to body as padding
+       so nothing shifts sideways when it disappears. */
+    var lockScroll = function () {
+      var bar = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.overflow = 'hidden';
+      if (bar > 0) document.body.style.paddingRight = bar + 'px';
     };
 
-    var close = function () {
+    var unlockScroll = function () {
+      document.documentElement.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+
+    var open = function () {
+      lastFocus = document.activeElement;
+      lockScroll();
+      drawer.setAttribute('data-open', '');
+      openBtn.setAttribute('aria-expanded', 'true');
+      /* Flush the style recalc before focusing: the drawer is
+         visibility:hidden until the attribute lands, and a hidden element
+         cannot take focus. */
+      void drawer.offsetHeight;
+      var closeBtn = drawer.querySelector('.drawer__close');
+      if (closeBtn) closeBtn.focus();
+    };
+
+    var close = function (restoreFocus) {
+      if (!drawer.hasAttribute('data-open')) return;
       drawer.removeAttribute('data-open');
+      unlockScroll();
       openBtn.setAttribute('aria-expanded', 'false');
-      if (lastFocus) lastFocus.focus();
+      if (restoreFocus !== false && lastFocus) lastFocus.focus();
     };
 
     openBtn.addEventListener('click', open);
-    drawer.querySelector('.drawer__scrim').addEventListener('click', close);
-    drawer.querySelector('.drawer__close').addEventListener('click', close);
+    drawer.querySelector('.drawer__scrim').addEventListener('click', function () { close(); });
+    drawer.querySelector('.drawer__close').addEventListener('click', function () { close(); });
+
+    /* A saved course links to course.html, so it leaves the page anyway — but
+       the drawer must still release the scroll lock, otherwise going Back
+       returns to a page that cannot scroll. */
+    drawer.addEventListener('click', function (e) {
+      if (e.target.closest('.drawer__body a[href]')) close(false);
+    });
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && drawer.hasAttribute('data-open')) close();
     });

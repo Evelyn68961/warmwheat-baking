@@ -978,6 +978,28 @@
 /* Drawer */
 .drawer { position: fixed; inset: 0; z-index: 80; visibility: hidden; }
 .drawer[data-open] { visibility: visible; }
+
+/* `visibility` on .drawer and .modal is a gate, not an animation: it decides
+   whether the panel can be focused at all, so it has to apply on the tick the
+   attribute changes.
+
+   Under prefers-reduced-motion it didn't. base.css sets
+   `transition-duration: 0.01ms !important` on `*`, and any element that
+   declares no transition-property gets the initial value `all`. `visibility`
+   is inherited, so opening a panel started a visibility transition on every
+   descendant — each stayed `hidden`, and a hidden element cannot take focus.
+   The focus() calls in saved.js and waitlist.js silently did nothing, focus
+   stayed on the page behind the scrim, and Tab carried on walking the
+   background: modal in appearance only, for exactly the users least able to
+   tolerate it.
+
+   Nothing in an overlay should animate under reduced motion anyway, so the
+   subtree opts out. Scoped so the rest of the page keeps the standard
+   reduced-motion treatment. */
+@media (prefers-reduced-motion: reduce) {
+  .modal, .modal *,
+  .drawer, .drawer * { transition: none !important; }
+}
 .drawer__scrim {
   position: absolute;
   inset: 0;

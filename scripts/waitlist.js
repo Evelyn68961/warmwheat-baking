@@ -50,6 +50,23 @@
   var lastFocus = null;
   var current = null;   // the .session__item being joined
 
+  /* Without a scroll lock the page keeps scrolling behind the scrim, so the
+     dialog sits still while the course page slides around underneath it.
+     `overflow: hidden` on <html> rather than `position: fixed` on <body>,
+     because the header is sticky and taking body out of flow drops it back to
+     its scrolled-away position. The scrollbar's width is handed to body as
+     padding so the layout doesn't jump sideways when it disappears. */
+  function lockScroll() {
+    var bar = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.overflow = 'hidden';
+    if (bar > 0) document.body.style.paddingRight = bar + 'px';
+  }
+
+  function unlockScroll() {
+    document.documentElement.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
+
   var CHECK = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" ' +
               'stroke="currentColor" stroke-width="2.4" stroke-linecap="round" ' +
               'stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
@@ -121,12 +138,22 @@
     modal.querySelector('#wlTitle').textContent = '加入候補';
 
     lastFocus = document.activeElement;
+    lockScroll();
     modal.setAttribute('data-open', '');
+    /* Force the style recalculation before focusing. The dialog is
+       visibility:hidden until the attribute change is applied, and a hidden
+       element cannot take focus — setAttribute() followed by focus() in the
+       same tick can therefore silently do nothing, leaving focus on the page
+       behind the scrim where Tab then walks the background. Reading a layout
+       property flushes the pending recalc. */
+    void modal.offsetHeight;
     modal.querySelector('#wlName').focus();
   }
 
   function close() {
+    if (!modal.hasAttribute('data-open')) return;
     modal.removeAttribute('data-open');
+    unlockScroll();
     modal.querySelector('#wlForm').reset();
     clearErrors();
     if (lastFocus) lastFocus.focus();
