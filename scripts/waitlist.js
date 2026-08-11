@@ -52,18 +52,25 @@
 
   /* Without a scroll lock the page keeps scrolling behind the scrim, so the
      dialog sits still while the course page slides around underneath it.
-     `overflow: hidden` on <html> rather than `position: fixed` on <body>,
-     because the header is sticky and taking body out of flow drops it back to
-     its scrolled-away position. The scrollbar's width is handed to body as
-     padding so the layout doesn't jump sideways when it disappears. */
+
+     The lock goes on <body> — not `position: fixed`, and not on <html>. Both
+     of those break `position: sticky`, and this page has two sticky boxes: the
+     header and the enrolment sidebar. Taking body out of flow drops them back
+     to their scrolled-away positions, and setting overflow on the root
+     propagates it to the viewport, which stops the root being the scrollport
+     sticky resolves against. Measured in Chrome at scrollY 600,
+     html{overflow:hidden} put the header's viewport top at -600 — un-stuck —
+     while body{overflow:hidden} left it at 0 and blocked real wheel input just
+     as effectively. The scrollbar's width is handed to body as padding so the
+     layout doesn't jump sideways when it disappears. */
   function lockScroll() {
     var bar = window.innerWidth - document.documentElement.clientWidth;
-    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
     if (bar > 0) document.body.style.paddingRight = bar + 'px';
   }
 
   function unlockScroll() {
-    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
     document.body.style.paddingRight = '';
   }
 

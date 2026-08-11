@@ -191,16 +191,19 @@
 
     /* Same reasoning as the waitlist dialog: with the drawer open the page
        behind the scrim still scrolls, so the panel stays put while the site
-       slides past underneath. The scrollbar's width goes to body as padding
-       so nothing shifts sideways when it disappears. */
+       slides past underneath. The lock goes on <body> rather than <html>
+       because overflow on the root propagates to the viewport and un-sticks
+       every `position: sticky` box on the page — this header and, on the
+       course pages, the enrolment sidebar. The scrollbar's width goes to body
+       as padding so nothing shifts sideways when it disappears. */
     var lockScroll = function () {
       var bar = window.innerWidth - document.documentElement.clientWidth;
-      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
       if (bar > 0) document.body.style.paddingRight = bar + 'px';
     };
 
     var unlockScroll = function () {
-      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
       document.body.style.paddingRight = '';
     };
 
