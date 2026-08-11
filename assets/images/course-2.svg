@@ -1,17 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="蛋糕課程(佔位示意圖)">
-  <rect width="480" height="360" fill="#FBEFD9"/>
-  <circle cx="240" cy="166" r="116" fill="#F7E2E0"/>
-  <rect x="0" y="292" width="480" height="68" fill="#F1E4D6"/>
-  <rect x="132" y="238" width="216" height="54" rx="6" fill="#C8892E"/>
-  <rect x="132" y="196" width="216" height="46" rx="6" fill="#F3E3CD"/>
-  <rect x="132" y="152" width="216" height="48" rx="6" fill="#C8892E"/>
-  <path d="M132 152h216v14c-18 12-36 0-54 10s-36 10-54 0-36 2-54-10Z" fill="#F7D9D2"/>
-  <g fill="#B4553F">
-    <circle cx="176" cy="136" r="13"/><circle cx="240" cy="130" r="13"/><circle cx="304" cy="136" r="13"/>
-  </g>
-  <g stroke="#6B4423" stroke-width="5" stroke-linecap="round">
-    <path d="M240 130V96"/>
-  </g>
-  <path d="M240 96c-8-10-4-22 0-28 4 6 8 18 0 28Z" fill="#C8892E"/>
-  <ellipse cx="240" cy="292" rx="128" ry="10" fill="#E0CDB6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="鮮奶油抹面蛋糕課程（佔位示意圖）">
+<rect width="480" height="360" fill="#F7E2E0"/>
+<circle cx="240" cy="164" r="116" fill="#FBEFD9" opacity=".7"/>
+<rect x="0" y="292" width="480" height="68" fill="#EBB9AE" opacity=".55"/>
+<rect x="132" y="238" width="216" height="54" rx="6" fill="#D98B76"/>
+<rect x="132" y="196" width="216" height="46" rx="6" fill="#FBEFD9"/>
+<rect x="132" y="152" width="216" height="48" rx="6" fill="#D98B76"/>
+<path d="M132 152h216v14c-18 12-36 0-54 10s-36 10-54 0-36 2-54-10Z" fill="#EBB9AE"/>
+<g fill="#EBB9AE"><circle cx="176" cy="136" r="13"/><circle cx="240" cy="130" r="13"/><circle cx="304" cy="136" r="13"/></g>
+<path d="M240 130V96" stroke="#6B4423" stroke-width="5" stroke-linecap="round"/>
+<path d="M240 96c-8-10-4-22 0-28 4 6 8 18 0 28Z" fill="#D98B76"/>
+<ellipse cx="240" cy="292" rx="128" ry="10" fill="#6B4423" opacity=".35"/>
 </svg>

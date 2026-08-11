@@ -10,7 +10,6 @@
 
 | 字體 | 用途 | 來源 | 授權 | 費用 |
 |---|---|---|---|---|
-| Noto Serif TC | 頁面標題（h1 / h2、Logo 字標） | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Serif+TC) | SIL Open Font License 1.1 | 免費，可商用 |
 | Noto Sans TC | 內文、表單、課程卡、篩選欄 | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+TC) | SIL Open Font License 1.1 | 免費，可商用 |
 
 **退回字體：** 襯線 Songti TC / PMingLiU / Georgia;無襯線 PingFang TC / Microsoft JhengHei。

@@ -81,7 +81,7 @@
 .logo { display: flex; align-items: center; gap: var(--s-3); }
 .logo img { width: 30px; height: 30px; }
 .logo__name {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.0625rem;
   letter-spacing: 0.03em;
 }
@@ -782,7 +782,7 @@
 .rating-summary__score { text-align: center; }
 .rating-summary__num {
   display: block;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: var(--fs-display);
   line-height: 1;
   color: var(--c-crust);

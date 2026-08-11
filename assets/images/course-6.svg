@@ -1,15 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="免烤甜點課程(佔位示意圖)">
-  <rect width="480" height="360" fill="#FBEFD9"/>
-  <circle cx="240" cy="168" r="114" fill="#F1E4D6"/>
-  <rect x="0" y="292" width="480" height="68" fill="#E8D3B6"/>
-  <path d="M164 148h152v96a28 28 0 0 1-28 28h-96a28 28 0 0 1-28-28Z" fill="#FBF7F1" stroke="#D8BE9C" stroke-width="5"/>
-  <path d="M164 200h152v44a28 28 0 0 1-28 28h-96a28 28 0 0 1-28-28Z" fill="#F3E3CD"/>
-  <path d="M166 148c0-18 34-30 74-30s74 12 74 30c0 12-34 20-74 20s-74-8-74-20Z" fill="#F7D9D2"/>
-  <g fill="#B4553F">
-    <circle cx="206" cy="138" r="10"/><circle cx="244" cy="132" r="11"/><circle cx="282" cy="140" r="9"/>
-  </g>
-  <rect x="196" y="272" width="88" height="12" rx="6" fill="#D8BE9C"/>
-  <path d="M240 118V92" stroke="#6B4423" stroke-width="5" stroke-linecap="round"/>
-  <path d="M240 92c-9-8-6-20 0-26 6 6 9 18 0 26Z" fill="#C8892E"/>
-  <ellipse cx="240" cy="290" rx="120" ry="9" fill="#D8BE9C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="免烤生乳酪蛋糕課程（佔位示意圖）">
+<rect width="480" height="360" fill="#F7E2E0"/>
+<circle cx="240" cy="164" r="116" fill="#FBEFD9" opacity=".7"/>
+<rect x="0" y="292" width="480" height="68" fill="#EBB9AE" opacity=".55"/>
+<path d="M144 200h192v78a24 24 0 0 1-24 20H168a24 24 0 0 1-24-20Z" fill="#FBEFD9" stroke="#6B4423" stroke-width="5"/>
+<ellipse cx="240" cy="200" rx="96" ry="24" fill="#D98B76" stroke="#6B4423" stroke-width="5"/>
+<path d="M144 244h192" stroke="#6B4423" stroke-width="4" opacity=".45"/>
+<g fill="#EBB9AE"><circle cx="198" cy="194" r="11"/><circle cx="240" cy="188" r="11"/><circle cx="282" cy="196" r="11"/></g>
+<path d="M240 176V150" stroke="#6B4423" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="240" cy="292" rx="128" ry="10" fill="#6B4423" opacity=".35"/>
 </svg>

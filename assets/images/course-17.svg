@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="提拉米蘇課程（佔位示意圖）">
+<rect width="480" height="360" fill="#E8DACB"/>
+<circle cx="240" cy="164" r="116" fill="#F3E3CD" opacity=".7"/>
+<rect x="0" y="292" width="480" height="68" fill="#A9784B" opacity=".55"/>
+<rect x="140" y="188" width="200" height="106" rx="10" fill="#F3E3CD" stroke="#3E2617" stroke-width="5"/>
+<rect x="140" y="188" width="200" height="30" rx="10" fill="#3E2617"/>
+<g fill="#A9784B" opacity=".45"><circle cx="156" cy="204" r="4"/><circle cx="178" cy="198" r="4"/><circle cx="200" cy="204" r="4"/><circle cx="222" cy="198" r="4"/><circle cx="244" cy="204" r="4"/><circle cx="266" cy="198" r="4"/><circle cx="288" cy="204" r="4"/><circle cx="310" cy="198" r="4"/><circle cx="332" cy="204" r="4"/></g>
+<g stroke="#3E2617" stroke-width="4" opacity=".5"><path d="M140 244h200"/><path d="M140 268h200"/></g>
+<rect x="164" y="224" width="152" height="16" rx="8" fill="#7A5230" opacity=".6"/>
+<ellipse cx="240" cy="292" rx="128" ry="10" fill="#3E2617" opacity=".35"/>
+</svg>

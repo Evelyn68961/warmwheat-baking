@@ -22,7 +22,10 @@
   --c-focus:       #C8892E;
 
   /* ---- Typography ---- */
-  --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+  /* One family across the whole site. --font-display exists so headings can be
+     swapped independently later without touching every rule that uses them. */
+  --font-display: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+                  -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-sans:  "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
                 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 

@@ -27,7 +27,7 @@ size and no enrol button on its listings. Even [Bread Ahead](https://www.breadah
 in London — the best-in-class benchmark — shows no class size, no day-of timetable, no
 kit list and no FAQ on its course pages.
 
-So this demo prices every course, filters nine of them six ways, and screens for fit
+So this demo prices every course, filters eighteen of them six ways, and screens for fit
 *before* it takes a booking.
 
 ## The three jobs
@@ -37,7 +37,7 @@ first one badly:
 
 | | Page | What the visitor is actually doing |
 |---|---|---|
-| **Find** | `courses.html` | Narrowing 9 courses down to the 2 worth reading about |
+| **Find** | `courses.html` | Narrowing 18 courses down to the 2 worth reading about |
 | **Understand** | `course.html` | Working out what happens in the room for 3.5 hours |
 | **Self-assess** | `enroll.html` | Deciding whether the course is wrong *for them* |
 
@@ -54,6 +54,10 @@ that will"** — and it never hard-blocks, because it's advice, not a gate.
   price bands, keyword search, availability and four sort orders, all combinable, with
   removable filter chips and a real empty state. Runs off `data-*` attributes on the
   cards, so the grid still renders as a plain list with JS disabled.
+- **A catalogue deep enough to filter** — 18 courses, and no facet value returns fewer
+  than two of them. A filter UI over a catalogue where half the categories hold one item
+  demonstrates nothing; the sidebar counts are derived from the cards at runtime, so they
+  can't go stale the way the hand-typed ones did.
 - **Eligibility assessment** — rule-based fit / caution / blocked verdicts driven by
   experience level, goal, schedule and allergens, feeding a four-step booking flow with
   per-step validation and a confirmation summary.
@@ -114,7 +118,7 @@ laptop, but it is a fallback rather than a designed mobile experience.
 
 ## Tech notes
 
-- Fonts: Noto Sans TC + Noto Serif TC via Google Fonts.
+- Font: Noto Sans TC via Google Fonts — one family for the whole site, weights 400/500/600/700.
 - No dependencies, no bundler — deploy by uploading the folder (see `DEPLOYMENT.md`).
 - Booking, payment and the assessment are front-end only. Nothing is sent anywhere.
 - `courses.html` reads `?q=`, `?cat=` and `?lv=` so the homepage search deep-links into

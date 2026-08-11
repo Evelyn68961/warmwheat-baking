@@ -161,6 +161,26 @@
     }
   }
 
+  /* --------------------------------------------------- facet counts */
+  /* The number beside each checkbox used to be typed into the HTML, and went
+     stale the first time the catalogue grew — the sidebar claimed 餅乾 1 while
+     the grid held three. Deriving them from the cards means they cannot drift
+     again. The authored numbers stay in the markup as a no-JS fallback; this
+     overwrites them on load. */
+  function renderFacetCounts() {
+    ['cat', 'lv', 'time'].forEach(function (name) {
+      form.querySelectorAll('input[name="' + name + '"]').forEach(function (input) {
+        if (!input.value) return;
+        var label = input.closest('label');
+        var el = label && label.querySelector('.count');
+        if (!el) return;
+        el.textContent = cards.filter(function (card) {
+          return card.dataset[name] === input.value;
+        }).length;
+      });
+    });
+  }
+
   /* ---------------------------------------------------------------- wire */
   form.addEventListener('change', apply);
   kwInput.addEventListener('input', apply);
@@ -173,6 +193,7 @@
   // Filtering is instant, so the form must never actually submit.
   form.addEventListener('submit', function (e) { e.preventDefault(); });
 
+  renderFacetCounts();
   hydrate();
   apply();
 })();

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="巴斯克乳酪蛋糕課程（佔位示意圖）">
+<rect width="480" height="360" fill="#E8DACB"/>
+<circle cx="240" cy="164" r="116" fill="#F3E3CD" opacity=".7"/>
+<rect x="0" y="292" width="480" height="68" fill="#A9784B" opacity=".55"/>
+<path d="M146 190c0-30 42-46 94-46s94 16 94 46v70a26 26 0 0 1-26 26H172a26 26 0 0 1-26-26Z" fill="#F3E3CD" stroke="#3E2617" stroke-width="5"/>
+<path d="M146 190c0-30 42-46 94-46s94 16 94 46c-18 20-56 30-94 30s-76-10-94-30Z" fill="#3E2617"/>
+<g fill="#A9784B" opacity=".35"><ellipse cx="200" cy="176" rx="22" ry="10"/><ellipse cx="280" cy="182" rx="18" ry="8"/></g>
+<path d="M160 258h160" stroke="#3E2617" stroke-width="4" opacity=".4"/>
+<ellipse cx="240" cy="292" rx="128" ry="10" fill="#3E2617" opacity=".35"/>
+</svg>

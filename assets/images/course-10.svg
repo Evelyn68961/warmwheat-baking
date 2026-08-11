@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="佛卡夏課程（佔位示意圖）">
+<rect width="480" height="360" fill="#E6EADA"/>
+<circle cx="240" cy="164" r="116" fill="#F6F8EF" opacity=".7"/>
+<rect x="0" y="292" width="480" height="68" fill="#AEBA8B" opacity=".55"/>
+<rect x="112" y="188" width="256" height="96" rx="22" fill="#7E8C5A" stroke="#4A5433" stroke-width="5"/>
+<g fill="#4A5433" opacity=".7"><circle cx="144" cy="216" r="7"/><circle cx="162" cy="254" r="7"/><circle cx="180" cy="216" r="7"/><circle cx="198" cy="254" r="7"/><circle cx="216" cy="216" r="7"/><circle cx="234" cy="254" r="7"/><circle cx="252" cy="216" r="7"/><circle cx="270" cy="254" r="7"/><circle cx="288" cy="216" r="7"/><circle cx="306" cy="254" r="7"/><circle cx="324" cy="216" r="7"/><circle cx="342" cy="254" r="7"/></g>
+<g fill="#AEBA8B" opacity=".9"><ellipse cx="166" cy="204" rx="13" ry="7" transform="rotate(-18 166 204)"/><ellipse cx="232" cy="200" rx="13" ry="7" transform="rotate(-18 232 200)"/><ellipse cx="300" cy="208" rx="13" ry="7" transform="rotate(-18 300 208)"/><ellipse cx="198" cy="268" rx="13" ry="7" transform="rotate(-18 198 268)"/><ellipse cx="286" cy="266" rx="13" ry="7" transform="rotate(-18 286 266)"/></g>
+<ellipse cx="240" cy="292" rx="128" ry="10" fill="#4A5433" opacity=".35"/>
+</svg>
