@@ -181,6 +181,24 @@
   document.getElementById('assessSubmit').addEventListener('click', showVerdict);
   toStep2.addEventListener('click', function () { if (!toStep2.disabled) goTo(2); });
 
+  /* 「沒有」 is not one option among six — it is the claim that there are none,
+     so it cannot stand alongside a specific restriction. Left unenforced, the
+     summary reads 「飲食限制：無、麩質」 and that contradiction is what gets
+     handed to the kitchen. Checking 沒有 clears the rest; checking anything
+     else clears 沒有. */
+  var allergyBoxes = Array.prototype.slice.call(
+    assessForm.querySelectorAll('input[name="allergy"]')
+  );
+  allergyBoxes.forEach(function (box) {
+    box.addEventListener('change', function () {
+      if (!box.checked) return;
+      allergyBoxes.forEach(function (other) {
+        if (other === box) return;
+        if (box.value === 'none' || other.value === 'none') other.checked = false;
+      });
+    });
+  });
+
   // Re-answering invalidates the shown verdict.
   assessForm.addEventListener('change', function () {
     if (!verdictEl.hidden) {
