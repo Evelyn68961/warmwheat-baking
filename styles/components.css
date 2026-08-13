@@ -102,6 +102,70 @@
 .nav__link[aria-current="page"]::after { transform: scaleX(1); }
 .nav__link[aria-current="page"] { color: var(--c-crust); font-weight: 600; }
 
+/* ------------------------------------------------------- Mobile nav toggle */
+.nav-toggle {
+  display: none;          /* only exists below the breakpoint */
+  width: 40px; height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.nav-toggle:hover { background: var(--c-line); }
+
+/* `:not(.sr-only)` matters: the button also carries a screen-reader label, and
+   `.nav-toggle span` (0,1,1) outweighs `.sr-only` (0,1,0). Unscoped, these
+   rules would override the label's `position: absolute` to `relative` — and
+   `clip` only applies to absolutely positioned boxes — so the label would be
+   painted as a fourth bar beside the icon. */
+.nav-toggle > span:not(.sr-only) {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 20px; height: 2px;
+  background: var(--c-ink);
+  transition: background var(--t-fast);
+}
+.nav-toggle > span:not(.sr-only)::before,
+.nav-toggle > span:not(.sr-only)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px; height: 2px;
+  background: var(--c-ink);
+  transition: transform var(--t-base);
+}
+.nav-toggle > span:not(.sr-only)::before { top: -6px; }
+.nav-toggle > span:not(.sr-only)::after  { top: 6px; }
+
+.nav-toggle[aria-expanded="true"] > span:not(.sr-only) { background: transparent; }
+.nav-toggle[aria-expanded="true"] > span:not(.sr-only)::before {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] > span:not(.sr-only)::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Injected by main.js, so it only exists where the panel can open. Sits under
+   the sticky header (50) and over everything else, so the panel — a child of
+   the header — stays lit while the page dims.
+
+   Deliberately no `visibility`: it is inherited, and the global reduced-motion
+   rule would start a transition on every descendant. opacity plus
+   pointer-events does the same job with nothing to inherit. */
+.nav-scrim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(48, 38, 30, 0.38);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-base);
+}
+
 /* ------------------------------------------------------------------- Hero */
 .hero {
   padding-block: var(--s-14);
@@ -916,7 +980,47 @@
 }
 
 @media (max-width: 720px) {
-  .nav { display: none; }
+  /* The nav used to be simply `display: none` here, with nothing to replace
+     it: below this width the four primary links did not exist on any page. */
+  .nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-right: 0;
+    padding: var(--s-3) var(--container-pad) var(--s-6);
+    background: var(--c-oat);
+    border-top: 1px solid var(--c-line);
+    box-shadow: 0 12px 24px rgba(48, 38, 30, .12);
+    /* A phone in landscape is barely taller than the panel; without a ceiling
+       the last link runs off the bottom, and because the panel hangs off a
+       sticky header the page cannot be scrolled to reach it. `contain` stops
+       the panel's own scroll from chaining to the page behind it. */
+    max-height: calc(100vh - var(--header-h));
+    max-height: calc(100dvh - var(--header-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    display: none;
+  }
+  .nav[data-open="true"] { display: flex; }
+  .nav__link {
+    display: block;
+    padding: var(--s-3) 0;
+    border-bottom: 1px solid var(--c-line);
+  }
+  .nav__link::after { display: none; }
+
+  .nav-toggle { display: flex; order: 3; }   /* last item, so it sits far right */
+  .nav-scrim { display: block; }
+  .nav-scrim[data-open] { opacity: 1; pointer-events: auto; }
+
+  /* Four things now share the bar, so stop the two longest from wrapping. */
+  .header__inner { gap: var(--s-4); }
+  .logo__name,
+  .header__inner .btn { white-space: nowrap; }
   .kit { grid-template-columns: minmax(0, 1fr); }
   .instructor { grid-template-columns: minmax(0, 1fr); }
   .field-row { grid-template-columns: minmax(0, 1fr); }
@@ -925,6 +1029,20 @@
   .stepper { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); }
   .summary th { width: 96px; }
   .footer__grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-8); }
+}
+
+/* On the narrowest phones the studio name is what has to give: the mark still
+   links home, and the name stays in the accessible tree rather than being
+   removed, so the link keeps its name for anyone not looking at it. */
+@media (max-width: 430px) {
+  .logo__name {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
 }
 
 /* ==========================================================================
@@ -1264,8 +1382,12 @@
   font-size: var(--fs-small);
   font-weight: 600;
   box-shadow: 0 6px 20px rgba(6, 199, 85, .35);
-  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), opacity var(--t-fast);
 }
+/* The fab sits above the header, so with the menu open it would float undimmed
+   and still tappable over a scrimmed page — a live target on a surface that is
+   telling the visitor it is not interactive. */
+body[data-nav-open] .line-fab { opacity: 0; pointer-events: none; }
 .line-fab:hover {
   color: #fff;
   transform: translateY(-2px);
