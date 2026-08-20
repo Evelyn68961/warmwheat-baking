@@ -91,3 +91,33 @@ table { border-collapse: collapse; width: 100%; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Chinese line breaking
+   Chinese has no word spaces, so a line may break between any two characters.
+   Left alone that regularly strands a single character and its full stop on a
+   line of its own — 「…確認適合再報名。」 breaking to a last line of just
+   「名。」 — which reads as a mistake rather than as typography.
+
+   `balance` evens the lines out and is right for short blocks: headings, the
+   intro paragraphs, card copy. `pretty` only adjusts the last line, so it goes
+   on running prose, where balancing whole paragraphs would be wrong (and where
+   Chrome declines to balance past its line limit anyway).
+   ========================================================================== */
+h1, h2, h3, h4,
+.lede,
+.hero__lede,
+.hero__title,
+.course-card__title,
+.detail-title,
+.q__title,
+.faq__q,
+.searchbar__hint,
+.booking__note,
+.done-note {
+  text-wrap: balance;
+}
+
+p, li, dd, blockquote, figcaption, .faq__a {
+  text-wrap: pretty;
+}
